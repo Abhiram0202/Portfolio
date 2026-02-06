@@ -14,7 +14,11 @@ export function HeroSection() {
         <div className="flex flex-col justify-center gap-6 lg:col-span-2">
           <div className="space-y-4">
             <h1 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
-              Hi There! 👋 I'M{' '}
+              Hi There!{' '}
+              <span className="inline-block origin-[70%_70%] animate-wave">
+                👋
+              </span>{' '}
+              I'M{' '}
               <span className="text-primary">{personalData.name.toUpperCase()}</span>
             </h1>
             <h2 className="text-2xl font-medium text-foreground/80 uppercase tracking-widest">
