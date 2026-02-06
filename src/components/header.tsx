@@ -2,13 +2,26 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { Menu, X } from 'lucide-react';
+import {
+  Menu,
+  X,
+  Home,
+  User,
+  Presentation,
+  FileText,
+  PenSquare,
+  GitFork,
+  Star,
+} from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
 const navLinks = [
-  { href: '#about', label: 'About' },
-  { href: '#contact', label: 'Contact' },
+  { href: '#home', label: 'Home', icon: Home },
+  { href: '#about', label: 'About', icon: User },
+  { href: '#projects', label: 'Projects', icon: Presentation },
+  { href: '#resume', label: 'Resume', icon: FileText },
+  { href: '#blogs', label: 'Blogs', icon: PenSquare },
 ];
 
 export function Header() {
@@ -30,16 +43,24 @@ export function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-foreground/60 transition-colors hover:text-foreground"
+              className="flex items-center gap-2 text-foreground/60 transition-colors hover:text-foreground"
             >
-              {link.label}
+              <link.icon className="h-4 w-4" />
+              <span>{link.label}</span>
             </Link>
           ))}
         </nav>
 
         <div className="flex items-center gap-2">
-          <Button asChild className="hidden md:flex">
-            <a href="#contact">Get in Touch</a>
+          <Button asChild>
+            <a
+              href="https://github.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <GitFork className="h-4 w-4" />
+              <Star className="h-4 w-4" />
+            </a>
           </Button>
           <Button
             variant="ghost"
@@ -64,14 +85,23 @@ export function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="rounded-lg px-4 py-2 text-lg font-medium text-foreground/80 transition-colors hover:text-foreground hover:bg-muted"
+                className="flex items-center gap-3 rounded-lg px-4 py-2 text-lg font-medium text-foreground/80 transition-colors hover:text-foreground hover:bg-muted"
                 onClick={() => setIsOpen(false)}
               >
-                {link.label}
+                <link.icon className="h-5 w-5" />
+                <span>{link.label}</span>
               </Link>
             ))}
             <Button asChild size="lg" className="mt-4">
-                <a href="#contact" onClick={() => setIsOpen(false)}>Get in Touch</a>
+              <a
+                href="https://github.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setIsOpen(false)}
+              >
+                <GitFork className="h-5 w-5" />
+                <Star className="h-5 w-5" />
+              </a>
             </Button>
           </nav>
         </div>
