@@ -1,3 +1,28 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "headshot",
+      "description": "A professional headshot of a person.",
+      "imageUrl": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxwcm9mZXNzaW9uYWwlMjBoZWFkc2hvdHxlbnwwfHx8fDE3NzAzMDQ3MTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "professional headshot"
+    },
+    {
+      "id": "project1",
+      "description": "Screenshot of an e-commerce platform.",
+      "imageUrl": "https://images.unsplash.com/photo-1566241477600-ac026ad43874?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3ZWJzaXRlJTIwc2NyZWVuc2hvdHxlbnwwfHx8fDE3NzAzODQ1MTF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "website screenshot"
+    },
+    {
+      "id": "project2",
+      "description": "Screenshot of a task management application.",
+      "imageUrl": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxkYXNoYm9hcmQlMjB1aXxlbnwwfHx8fDE3NzAyNzIwMTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "dashboard ui"
+    },
+    {
+      "id": "project3",
+      "description": "Screenshot of a portfolio generator website.",
+      "imageUrl": "https://images.unsplash.com/photo-1748609278627-4b0e483b9b70?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtb2Rlcm4lMjB3ZWJzaXRlfGVufDB8fHx8MTc3MDMwODg2NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "modern website"
+    }
+  ]
 }
