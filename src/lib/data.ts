@@ -12,11 +12,11 @@ import {
 } from 'lucide-react';
 
 export const personalData = {
-  name: 'Soumyajit Behera',
+  name: 'Abhiram Yadav',
   title: 'Software Engineer',
   bio: "I’m a Software Engineer who loves transforming ideas into reliable, scalable products. Over time, I’ve explored several technologies and found my passion in building high-performance systems and intuitive user experiences. I’m proficient in JavaScript, C++, Rust, Node.js, and Java — and I enjoy working across both backend and frontend stacks. My key areas of interest include developing Web Applications, Blockchain Solutions, and exploring new ways to bridge on-chain and off-chain systems. Whenever possible, I love building projects with Node.js and modern frameworks like React.js and Next.js.",
   contact: {
-    email: 'soumyajit.behera@example.com',
+    email: 'abhiram.yadav@example.com',
     social: [
       { name: 'GitHub', url: 'https://github.com', icon: Github },
       { name: 'LinkedIn', url: 'https://linkedin.com', icon: Linkedin },

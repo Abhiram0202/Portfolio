@@ -22,7 +22,7 @@ export function Header() {
           className="flex items-center gap-2 text-primary"
           onClick={() => setIsOpen(false)}
         >
-          <span className="font-bold text-2xl tracking-wider">SB.</span>
+          <span className="font-bold text-2xl tracking-wider">AR.</span>
         </Link>
 
         <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
