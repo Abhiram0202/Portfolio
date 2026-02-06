@@ -21,7 +21,6 @@ import {
   DialogTitle,
   DialogTrigger,
 } from '@/components/ui/dialog';
-import { Label } from '@/components/ui/label';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
@@ -43,7 +42,7 @@ type AboutMeFormValues = z.infer<typeof aboutMeSchema>;
 
 export function AboutSection() {
   const [bio, setBio] = useState(personalData.bio);
-  const headshot = PlaceHolderImages.find((img) => img.id === 'headshot');
+  const illustration = PlaceHolderImages.find((img) => img.id === 'project2');
 
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const [isGenerating, setIsGenerating] = useState(false);
@@ -78,26 +77,14 @@ export function AboutSection() {
   return (
     <SectionWrapper id="about" className="bg-card">
       <div className="grid grid-cols-1 gap-12 lg:grid-cols-3">
-        <div className="flex justify-center items-center lg:col-span-1">
-          <div className="relative h-64 w-64 md:h-80 md:w-80 lg:h-96 lg:w-96">
-            {headshot && (
-              <Image
-                src={headshot.imageUrl}
-                alt={personalData.name}
-                width={400}
-                height={400}
-                data-ai-hint={headshot.imageHint}
-                className="rounded-full object-cover shadow-lg border-4 border-background"
-              />
-            )}
-          </div>
-        </div>
         <div className="flex flex-col justify-center gap-6 lg:col-span-2">
           <div className="space-y-4">
+            <p className="text-xl md:text-2xl text-muted-foreground">Hi There! 👋</p>
             <h1 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
-              {personalData.name}
+              I'm{' '}
+              <span className="text-primary">{personalData.name}</span>
             </h1>
-            <h2 className="text-2xl font-medium text-primary">
+            <h2 className="text-2xl font-medium text-foreground/80">
               {personalData.title}
             </h2>
             <p className="text-foreground/80 md:text-xl">{bio}</p>
@@ -171,6 +158,19 @@ export function AboutSection() {
                 </Form>
               </DialogContent>
             </Dialog>
+          </div>
+        </div>
+        <div className="flex justify-center items-center lg:col-span-1">
+          <div className="relative w-full aspect-square max-w-[400px] lg:max-w-none">
+            {illustration && (
+              <Image
+                src={illustration.imageUrl}
+                alt="Developer illustration"
+                fill
+                data-ai-hint={illustration.imageHint}
+                className="object-contain"
+              />
+            )}
           </div>
         </div>
       </div>

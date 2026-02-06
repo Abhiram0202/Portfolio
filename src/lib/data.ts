@@ -10,8 +10,8 @@ import {
 } from 'lucide-react';
 
 export const personalData = {
-  name: 'Alex Doe',
-  title: 'Full-Stack Developer & UI/UX Enthusiast',
+  name: 'Velpula Abhiram Yadav',
+  title: 'MERN Stack Developer',
   bio: "A passionate and creative full-stack developer with a knack for building beautiful, functional, and user-centered web applications. With a strong foundation in both front-end and back-end technologies, I enjoy turning complex problems into elegant solutions. I'm always eager to learn new things and collaborate with like-minded individuals to create amazing digital experiences.",
   contact: {
     email: 'alex.doe@example.com',

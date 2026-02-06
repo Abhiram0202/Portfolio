@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { Menu, X, Code2 } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
@@ -21,11 +21,10 @@ export function Header() {
       <div className="container flex h-16 max-w-screen-2xl items-center justify-between">
         <Link
           href="/"
-          className="flex items-center gap-2 font-bold text-lg"
+          className="flex items-center gap-2 text-primary"
           onClick={() => setIsOpen(false)}
         >
-          <Code2 className="h-6 w-6 text-primary" />
-          <span className="font-headline">ProfolioCraft</span>
+          <span className="font-bold text-2xl tracking-wider">AR.</span>
         </Link>
 
         <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
