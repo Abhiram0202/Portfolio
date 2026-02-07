@@ -20,7 +20,7 @@ export const personalData = {
     social: [
       {
         name: 'GitHub',
-        url: 'https://github.com/RAM-2303A51086',
+        url: 'https://github.com/Abhiram0202',
         icon: Github,
       },
       { name: 'LinkedIn', url: 'https://linkedin.com', icon: Linkedin },
