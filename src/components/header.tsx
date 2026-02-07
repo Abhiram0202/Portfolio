@@ -54,7 +54,7 @@ export function Header() {
         <div className="flex items-center gap-2">
           <Button asChild>
             <a
-              href="https://github.com"
+              href="https://github.com/RAM-2303A51086"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -94,7 +94,7 @@ export function Header() {
             ))}
             <Button asChild size="lg" className="mt-4">
               <a
-                href="https://github.com"
+                href="https://github.com/RAM-2303A51086"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setIsOpen(false)}
