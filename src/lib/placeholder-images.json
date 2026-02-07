@@ -1,10 +1,10 @@
 {
   "placeholderImages": [
     {
-      "id": "headshot",
-      "description": "A professional headshot of a person.",
-      "imageUrl": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxwcm9mZXNzaW9uYWwlMjBoZWFkc2hvdHxlbnwwfHx8fDE3NzAzMDQ3MTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "professional headshot"
+      "id": "profile-avatar",
+      "description": "Abhiram Yadav's profile picture.",
+      "imageUrl": "https://storage.googleapis.com/res-blockcraft/image/48858548-d3b6-455b-8692-a162235c024d.png",
+      "imageHint": "profile picture"
     },
     {
       "id": "project1",

@@ -2,10 +2,13 @@
 
 import { personalData } from '@/lib/data';
 import { SectionWrapper } from '@/components/section-wrapper';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export function HeroSection() {
-  const imageUrl =
-    'https://storage.googleapis.com/res-blockcraft/image/48858548-d3b6-455b-8692-a162235c024d.png';
+  const profileImage = PlaceHolderImages.find(
+    (img) => img.id === 'profile-avatar'
+  );
+  const imageUrl = profileImage?.imageUrl;
 
   return (
     <SectionWrapper id="home" className="bg-card">
