@@ -5,9 +5,12 @@ import { cn } from '@/lib/utils';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 
-export const metadata: Metadata = {
-  title: 'ProfolioCraft | Professional Portfolio',
-  description: 'A professional portfolio for showcasing skills and projects, built with Next.js and AI.',
+export const metadata = {
+  title: "Abhiram Yadav | Full Stack Developer",
+  description: "Portfolio of Abhiram Yadav",
+  icons: {
+    icon: "/favicon-v2.ico",
+  },
 };
 
 export default function RootLayout({
