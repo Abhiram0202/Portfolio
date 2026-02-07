@@ -14,7 +14,7 @@ export function AboutSection() {
       <div className="max-w-4xl mx-auto text-left space-y-8">
         <div className="text-center mb-8">
           <p className="text-lg text-foreground/80">
-            India | +91-7013521029 | abhiy9164@gmail.com
+            India | abhiy9164@gmail.com
           </p>
         </div>
 
