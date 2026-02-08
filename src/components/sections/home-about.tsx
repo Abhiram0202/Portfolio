@@ -6,7 +6,7 @@ import { SectionWrapper } from '@/components/section-wrapper';
 import React from 'react';
 
 export function HomeAboutSection() {
-  const [rotate, setRotate] = React.useState({ x: 0, y: 0 });
+  const [transform, setTransform] = React.useState({ x: 0, y: 0, scale: 1 });
   const containerRef = React.useRef<HTMLDivElement>(null);
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -24,20 +24,20 @@ export function HomeAboutSection() {
 
     const maxRotate = 15; // Max rotation in degrees
 
-    setRotate({
+    setTransform({
       x: yPct * maxRotate * -1, // Rotate on X-axis based on Y position (inverted)
-      y: xPct * maxRotate,      // Rotate on Y-axis based on X position
+      y: xPct * maxRotate, // Rotate on Y-axis based on X position
+      scale: 1.05,
     });
   };
 
   const handleMouseLeave = () => {
-    setRotate({ x: 0, y: 0 });
+    setTransform({ x: 0, y: 0, scale: 1 });
   };
 
   return (
     <SectionWrapper id="home-about" className="py-24">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-        
         {/* Left Content */}
         <div className="space-y-6">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl uppercase text-primary">
@@ -58,7 +58,7 @@ export function HomeAboutSection() {
         >
           <div
             style={{
-              transform: `rotateX(${rotate.x}deg) rotateY(${rotate.y}deg)`,
+              transform: `rotateX(${transform.x}deg) rotateY(${transform.y}deg) scale(${transform.scale})`,
             }}
             className="relative w-[230px] aspect-square rounded-full overflow-hidden transition-transform duration-100 ease-out"
           >
@@ -71,7 +71,6 @@ export function HomeAboutSection() {
             />
           </div>
         </div>
-
       </div>
     </SectionWrapper>
   );
