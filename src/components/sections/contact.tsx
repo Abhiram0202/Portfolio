@@ -20,7 +20,7 @@ export function ContactSection() {
           Feel free to <span className="text-primary">connect</span> with me.
         </p>
         <div className="flex items-center justify-center gap-6">
-          <TooltipProvider>
+          <TooltipProvider delayDuration={100}>
             {personalData.contact.social.map((social) => (
               <Tooltip key={social.name}>
                 <TooltipTrigger asChild>
