@@ -7,7 +7,7 @@ export function HeroSection() {
   return (
     <SectionWrapper
       id="home"
-      className="flex-grow flex items-center justify-start border-b-0"
+      className="flex min-h-[calc(100vh-4rem)] items-center justify-start border-b-0 py-0"
     >
       <div className="flex flex-col items-start justify-center text-left">
         <div className="space-y-2">
