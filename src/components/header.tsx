@@ -80,7 +80,7 @@ export function Header() {
       {isOpen && (
         <div
           className={cn(
-            'md:hidden absolute top-16 left-0 w-full border-t bg-background/95 backdrop-blur-lg',
+            'md:hidden absolute top-16 left-0 w-full border-t bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80',
             'animate-in fade-in-20 slide-in-from-top-5'
           )}
         >
