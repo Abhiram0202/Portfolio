@@ -32,8 +32,8 @@ export function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 max-w-screen-2xl items-center justify-between px-6 md:px-10">
+    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
+      <div className="container flex h-16 max-w-screen-2xl items-center justify-between px-10 md:px-16">
         <Link
           href="/"
           className="flex items-center gap-2 text-primary"
@@ -80,7 +80,7 @@ export function Header() {
       {isOpen && (
         <div
           className={cn(
-            'md:hidden absolute top-16 left-0 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-t',
+            'md:hidden absolute top-16 left-0 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80 border-t',
             'animate-in fade-in-20 slide-in-from-top-5'
           )}
         >
@@ -89,7 +89,7 @@ export function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="flex items-center gap-3 rounded-lg px-4 py-2 text-lg font-medium text-foreground/80 transition-colors hover:text-foreground hover:bg-muted"
+                className="flex items-center gap-3 rounded-lg px-4 py-2 text-lg font-medium text-foreground transition-colors hover:text-foreground hover:bg-muted"
                 onClick={() => setIsOpen(false)}
               >
                 <link.icon className="h-5 w-5" />
