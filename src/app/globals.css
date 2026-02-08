@@ -81,10 +81,20 @@
   body {
     @apply text-foreground;
     background-color: hsl(var(--background));
+  }
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
     background-image: url('/background.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    animation: blink 10s infinite ease-in-out;
   }
 }
 
@@ -159,6 +169,15 @@
     50% {
       transform: scale(1);
       opacity: 1;
+    }
+  }
+
+  @keyframes blink {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.85;
     }
   }
 }
