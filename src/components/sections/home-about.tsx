@@ -3,8 +3,37 @@
 import Image from 'next/image';
 import { personalData } from '@/lib/data';
 import { SectionWrapper } from '@/components/section-wrapper';
+import React from 'react';
 
 export function HomeAboutSection() {
+  const [rotate, setRotate] = React.useState({ x: 0, y: 0 });
+  const containerRef = React.useRef<HTMLDivElement>(null);
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (!containerRef.current) return;
+
+    const rect = containerRef.current.getBoundingClientRect();
+    const width = rect.width;
+    const height = rect.height;
+
+    const mouseX = e.clientX - rect.left;
+    const mouseY = e.clientY - rect.top;
+
+    const xPct = mouseX / width - 0.5;
+    const yPct = mouseY / height - 0.5;
+
+    const maxRotate = 15; // Max rotation in degrees
+
+    setRotate({
+      x: yPct * maxRotate * -1, // Rotate on X-axis based on Y position (inverted)
+      y: xPct * maxRotate,      // Rotate on Y-axis based on X position
+    });
+  };
+
+  const handleMouseLeave = () => {
+    setRotate({ x: 0, y: 0 });
+  };
+
   return (
     <SectionWrapper id="home-about" className="py-24">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -20,8 +49,19 @@ export function HomeAboutSection() {
         </div>
 
         {/* Right Profile Image */}
-        <div className="flex justify-center items-center">
-          <div className="relative w-[230px] aspect-square rounded-full overflow-hidden transition-transform duration-300 ease-in-out hover:scale-105">
+        <div
+          ref={containerRef}
+          onMouseMove={handleMouseMove}
+          onMouseLeave={handleMouseLeave}
+          className="flex justify-center items-center"
+          style={{ perspective: '800px' }}
+        >
+          <div
+            style={{
+              transform: `rotateX(${rotate.x}deg) rotateY(${rotate.y}deg)`,
+            }}
+            className="relative w-[230px] aspect-square rounded-full overflow-hidden transition-transform duration-100 ease-out"
+          >
             <Image
               src="/myphoto.png"
               alt="My Profile Photo"
