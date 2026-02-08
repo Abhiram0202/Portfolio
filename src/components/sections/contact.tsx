@@ -2,6 +2,12 @@
 import { SectionWrapper } from '@/components/section-wrapper';
 import { Button } from '@/components/ui/button';
 import { personalData } from '@/lib/data';
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from '@/components/ui/tooltip';
 
 export function ContactSection() {
   return (
@@ -11,21 +17,35 @@ export function ContactSection() {
           Find Me On
         </h2>
         <p className="max-w-[700px] mx-auto text-foreground/80 md:text-xl mb-8">
-          Feel free to connect with me.
+          Feel free to <span className="text-primary">connect</span> with me.
         </p>
-        <div className="flex items-center justify-center gap-4">
-          {personalData.contact.social.map((social) => (
-            <Button key={social.name} variant="outline" size="icon" asChild>
-              <a
-                href={social.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={social.name}
-              >
-                <social.icon className="h-6 w-6 text-foreground" />
-              </a>
-            </Button>
-          ))}
+        <div className="flex items-center justify-center gap-6">
+          <TooltipProvider>
+            {personalData.contact.social.map((social) => (
+              <Tooltip key={social.name}>
+                <TooltipTrigger asChild>
+                  <Button
+                    variant="outline"
+                    size="icon"
+                    className="rounded-full h-16 w-16 bg-card-foreground text-primary hover:bg-card-foreground/90 hover:shadow-lg hover:shadow-primary/30 transition-all duration-300"
+                    asChild
+                  >
+                    <a
+                      href={social.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={social.name}
+                    >
+                      <social.icon className="h-7 w-7" />
+                    </a>
+                  </Button>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>{social.name}</p>
+                </TooltipContent>
+              </Tooltip>
+            ))}
+          </TooltipProvider>
         </div>
       </div>
     </SectionWrapper>

@@ -2,13 +2,13 @@ import {
   BrainCircuit,
   Code,
   Github,
-  Linkedin,
   Paintbrush,
-  Twitter,
   Users,
   Database,
   Rocket,
   Plus,
+  Instagram,
+  Mail,
 } from 'lucide-react';
 
 export const personalData = {
@@ -20,11 +20,19 @@ export const personalData = {
     social: [
       {
         name: 'GitHub',
-        url: 'https://github.com/Abhiram0202',
+        url: '#',
         icon: Github,
       },
-      { name: 'LinkedIn', url: 'https://linkedin.com', icon: Linkedin },
-      { name: 'Twitter', url: 'https://twitter.com', icon: Twitter },
+      {
+        name: 'Gmail',
+        url: 'mailto:abhiy9164@gmail.com',
+        icon: Mail,
+      },
+      {
+        name: 'Instagram',
+        url: '#',
+        icon: Instagram,
+      },
     ],
   },
 };
