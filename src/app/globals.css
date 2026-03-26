@@ -29,12 +29,15 @@
 
 @layer base {
   * {
-    @apply border-border;
+    @apply border-border/20;
+    cursor: auto !important;
   }
+  
   body {
     @apply text-foreground bg-background;
-    background-image: radial-gradient(circle at 50% 50%, #1a1a2e 0%, #0a0a0a 100%);
+    background: radial-gradient(circle at 50% 0%, #1a1a2e 0%, #0a0a0a 100%);
     background-attachment: fixed;
+    min-height: 100vh;
   }
 }
 
@@ -100,6 +103,6 @@
   }
 
   .glass {
-    @apply bg-background/50 backdrop-blur-lg border border-white/10 shadow-xl;
+    @apply bg-background/20 backdrop-blur-md border border-white/5 shadow-xl;
   }
 }

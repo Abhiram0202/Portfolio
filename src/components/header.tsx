@@ -16,6 +16,7 @@ import {
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { personalData } from '@/lib/data';
+import { motion } from 'framer-motion';
 
 const navLinks = [
   { href: '/', label: 'Home', icon: Home },
@@ -27,8 +28,6 @@ const navLinks = [
 
 const githubUrl =
   personalData.contact.social.find((s) => s.name === 'GitHub')?.url || '#';
-
-import { motion } from 'framer-motion';
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -43,7 +42,7 @@ export function Header() {
         damping: 20,
         mass: 1
       }}
-      className="sticky top-0 z-50 w-full glass shadow-sm"
+      className="sticky top-0 z-50 w-full glass"
     >
       <div className="container flex h-16 max-w-screen-2xl items-center justify-between px-16 md:px-24">
         <Link
@@ -70,11 +69,12 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <Button asChild>
+          <Button asChild variant="ghost" size="sm">
             <a
               href={githubUrl}
               target="_blank"
               rel="noopener noreferrer"
+              className="flex items-center gap-1"
             >
               <GitFork className="h-4 w-4" />
               <Star className="h-4 w-4" />
@@ -92,36 +92,33 @@ export function Header() {
         </div>
       </div>
       {isOpen && (
-  <>
-    {/* Overlay */}
-    <div
-      className="fixed inset-0 z-40 bg-black/50"
-      onClick={() => setIsOpen(false)}
-    />
-
-    {/* Mobile Menu */}
-    <div
-      className={cn(
-        "md:hidden fixed inset-x-0 top-16 z-50 border-t border-border/40 bg-background/95 backdrop-blur-md supports-[backdrop-filter]:bg-background/80",
-        "animate-in fade-in-20 slide-in-from-top-5"
-      )}
-    >
-      <nav className="grid items-start gap-4 p-4">
-        {navLinks.map((link) => (
-          <Link
-            key={link.href}
-            href={link.href}
-            className="flex items-center gap-3 rounded-lg px-4 py-2 text-lg font-medium text-foreground transition-colors hover:text-foreground hover:bg-muted"
+        <>
+          <div
+            className="fixed inset-0 z-40 bg-black/50 backdrop-blur-sm"
             onClick={() => setIsOpen(false)}
+          />
+          <div
+            className={cn(
+              "md:hidden fixed inset-x-0 top-16 z-50 border-t border-white/5 bg-background/95 backdrop-blur-md",
+              "animate-in fade-in-20 slide-in-from-top-5"
+            )}
           >
-            <link.icon className="h-5 w-5" />
-            <span>{link.label}</span>
-          </Link>
-        ))}
-      </nav>
-    </div>
-  </>
-)}
+            <nav className="grid items-start gap-4 p-4">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="flex items-center gap-3 rounded-lg px-4 py-2 text-lg font-medium text-foreground transition-colors hover:text-foreground hover:bg-white/5"
+                  onClick={() => setIsOpen(false)}
+                >
+                  <link.icon className="h-5 w-5" />
+                  <span>{link.label}</span>
+                </Link>
+              ))}
+            </nav>
+          </div>
+        </>
+      )}
     </motion.header>
   );
 }

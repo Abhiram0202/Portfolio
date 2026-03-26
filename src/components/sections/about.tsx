@@ -24,7 +24,7 @@ export function AboutSection() {
           </p>
         </div>
 
-        <Card>
+        <Card className="bg-white/5 border-white/10">
           <CardHeader>
             <CardTitle className="text-2xl text-primary">Career Objective</CardTitle>
           </CardHeader>
@@ -38,7 +38,7 @@ export function AboutSection() {
           </CardContent>
         </Card>
 
-        <Card>
+        <Card className="bg-white/5 border-white/10">
           <CardHeader>
             <CardTitle className="text-2xl text-primary">Education</CardTitle>
           </CardHeader>
@@ -55,7 +55,7 @@ export function AboutSection() {
           </CardContent>
         </Card>
 
-        <Card>
+        <Card className="bg-white/5 border-white/10">
           <CardHeader>
             <CardTitle className="text-2xl text-primary">Technical Skills</CardTitle>
           </CardHeader>
@@ -77,7 +77,7 @@ export function AboutSection() {
           </CardContent>
         </Card>
 
-        <Card>
+        <Card className="bg-white/5 border-white/10">
           <CardHeader>
             <CardTitle className="text-2xl text-primary">Activities & Learning</CardTitle>
           </CardHeader>

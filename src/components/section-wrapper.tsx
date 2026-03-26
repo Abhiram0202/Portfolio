@@ -16,7 +16,7 @@ export function SectionWrapper({
     <section
       id={id}
       className={cn(
-        'w-full py-12 md:py-24 lg:py-32 border-b last:border-b-0',
+        'w-full py-12 md:py-24 lg:py-32 bg-transparent',
         className
       )}
     >
