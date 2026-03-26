@@ -16,11 +16,11 @@ export function SectionWrapper({
     <section
       id={id}
       className={cn(
-        'w-full py-12 md:py-24 lg:py-32 bg-transparent border-none outline-none',
+        'w-full py-12 md:py-24 lg:py-32 bg-transparent border-none outline-none overflow-hidden',
         className
       )}
     >
-      <div className="container px-6 md:px-12 lg:px-24 mx-auto">{children}</div>
+      <div className="container px-6 md:px-12 lg:px-24 mx-auto bg-transparent">{children}</div>
     </section>
   );
 }

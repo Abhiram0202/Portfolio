@@ -36,12 +36,13 @@
     height: 100%;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
   }
 
   body {
     @apply text-foreground;
-    background: radial-gradient(circle at 50% 0%, #1a1a2e 0%, #000000 100%);
-    background-attachment: fixed;
+    /* Unified Global Background */
+    background: radial-gradient(circle at 50% 0%, #1a1a2e 0%, #000000 100%) fixed !important;
     background-size: cover;
     min-height: 100vh;
   }

@@ -18,8 +18,8 @@ const itemVariants: Variants = {
     y: 0, 
     filter: 'blur(0px)',
     transition: { 
-      duration: 2.2,
-      ease: [0.25, 1, 0.5, 1] // extremely smooth and long ease out
+      duration: 1.2,
+      ease: [0.25, 1, 0.5, 1]
     } 
   }
 };
@@ -30,17 +30,9 @@ export function HeroSection() {
   return (
     <section
       id="home"
-      className="flex min-h-[calc(100vh-4rem)] items-center relative overflow-hidden"
+      className="flex min-h-[calc(100vh-4rem)] items-center relative overflow-hidden bg-transparent"
     >
-      {/* Background glowing orb */}
-      <motion.div 
-        initial={{ opacity: 0, scale: 0.5 }}
-        animate={{ opacity: 0.15, scale: 1 }}
-        transition={{ duration: 3, ease: "easeOut" }}
-        className="absolute top-1/2 left-1/4 w-[500px] h-[500px] bg-primary rounded-full blur-[120px] -translate-y-1/2 pointer-events-none"
-      />
-
-      <div className="container px-16 md:px-24 relative z-10">
+      <div className="container px-16 md:px-24 relative z-10 bg-transparent">
         <motion.div 
           variants={containerVariants}
           initial="hidden"
@@ -83,7 +75,7 @@ export function HeroSection() {
                       key={index}
                       initial={{ opacity: 0, display: "none" }}
                       animate={{ opacity: 1, display: "inline" }}
-                      transition={{ duration: 0.01, delay: 1.5 + index * 0.1 }}
+                      transition={{ duration: 0.01, delay: 0.5 + index * 0.1 }}
                       className={isFirstWord ? "text-primary font-bold" : "text-muted-foreground"}
                     >
                       {char === " " ? "\u00A0" : char}
