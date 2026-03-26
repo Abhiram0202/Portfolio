@@ -2,6 +2,7 @@
 
 import { personalData } from '@/lib/data';
 import { motion, Variants } from 'framer-motion';
+import { useState, useEffect } from 'react';
 
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
@@ -24,9 +25,46 @@ const itemVariants: Variants = {
   }
 };
 
+const titles = ["Software Engineer", "Backend Developer"];
+
 export function HeroSection() {
-  const titleText = personalData.title.toUpperCase();
-  
+  const [titleIndex, setTitleIndex] = useState(0);
+  const [displayText, setDisplayText] = useState('');
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [speed, setSpeed] = useState(150);
+
+  useEffect(() => {
+    const currentTitle = titles[titleIndex].toUpperCase();
+    
+    const handleTyping = () => {
+      if (!isDeleting) {
+        // Typing phase
+        const nextText = currentTitle.substring(0, displayText.length + 1);
+        setDisplayText(nextText);
+        setSpeed(150);
+
+        if (nextText === currentTitle) {
+          setIsDeleting(true);
+          setSpeed(2000); // Wait at the end of the word
+        }
+      } else {
+        // Deleting phase
+        const nextText = currentTitle.substring(0, displayText.length - 1);
+        setDisplayText(nextText);
+        setSpeed(50);
+
+        if (nextText === '') {
+          setIsDeleting(false);
+          setTitleIndex((prev) => (prev + 1) % titles.length);
+          setSpeed(500); // Pause before typing the next word
+        }
+      }
+    };
+
+    const timer = setTimeout(handleTyping, speed);
+    return () => clearTimeout(timer);
+  }, [displayText, isDeleting, titleIndex, speed]);
+
   return (
     <section
       id="home"
@@ -65,21 +103,21 @@ export function HeroSection() {
             
             <motion.div 
               variants={itemVariants}
-              className="text-xl md:text-2xl font-medium uppercase tracking-widest mt-4 flex items-center flex-wrap"
+              className="text-xl md:text-2xl font-medium uppercase tracking-widest mt-4 flex items-center flex-wrap min-h-[1.5em]"
             >
               <div className="flex">
-                {titleText.split('').map((char, index) => {
-                  const isFirstWord = index < titleText.indexOf(' ');
+                {displayText.split('').map((char, index) => {
+                  const currentFullWord = titles[titleIndex].toUpperCase();
+                  const spaceIndex = currentFullWord.indexOf(' ');
+                  const isFirstWord = index < spaceIndex;
+                  
                   return (
-                    <motion.span
+                    <span
                       key={index}
-                      initial={{ opacity: 0, display: "none" }}
-                      animate={{ opacity: 1, display: "inline" }}
-                      transition={{ duration: 0.01, delay: 0.5 + index * 0.1 }}
                       className={isFirstWord ? "text-primary font-bold" : "text-muted-foreground"}
                     >
                       {char === " " ? "\u00A0" : char}
-                    </motion.span>
+                    </span>
                   );
                 })}
                 <motion.span
