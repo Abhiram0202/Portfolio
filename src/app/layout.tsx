@@ -5,7 +5,6 @@ import { cn } from '@/lib/utils';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { Preloader } from '@/components/preloader';
-import { CustomCursor } from '@/components/ui/custom-cursor';
 
 export const metadata = {
   title: "Abhiram Yadav | Full Stack Developer",
@@ -32,11 +31,10 @@ export default function RootLayout({
       </head>
       <body
         className={cn(
-          'min-h-screen font-body antialiased md:cursor-none',
+          'min-h-screen font-body antialiased',
           'font-body'
         )}
       >
-        <CustomCursor />
         <Preloader />
         <div className="flex min-h-dvh flex-col">
           <Header />
