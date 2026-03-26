@@ -28,10 +28,6 @@
 }
 
 @layer base {
-  * {
-    cursor: auto !important;
-  }
-  
   html, body {
     height: 100%;
     margin: 0;
@@ -41,7 +37,7 @@
 
   body {
     @apply text-foreground;
-    /* Fixed Global Background - No scrolling breaks */
+    /* Consistent Deep Purple to Black Faded Background */
     background: radial-gradient(circle at 50% 0%, #1a1a2e 0%, #000000 100%) fixed !important;
     background-size: cover;
     min-height: 100vh;
