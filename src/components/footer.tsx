@@ -3,14 +3,14 @@ import { personalData } from '@/lib/data';
 export function Footer() {
   return (
     <footer className="w-full bg-transparent">
-      <div className="container flex flex-col items-center justify-between gap-4 py-8 px-6 sm:flex-row md:px-10">
-        <p className="text-sm text-foreground/60">
+      <div className="container grid grid-cols-1 items-center gap-4 py-8 px-6 md:grid-cols-3 md:px-10">
+        <p className="text-sm text-foreground/60 text-center md:text-left">
           Designed and Developed by {personalData.name}
         </p>
-        <p className="text-sm text-foreground/40">
+        <p className="text-sm text-foreground/40 text-center">
           Copyright © 2026 AY
         </p>
-        <div className="flex items-center gap-4">
+        <div className="flex items-center justify-center gap-4 md:justify-end">
           {personalData.contact.social.map((social) => (
             <a
               key={social.name}
