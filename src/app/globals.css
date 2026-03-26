@@ -29,14 +29,20 @@
 
 @layer base {
   * {
-    @apply border-border/20;
     cursor: auto !important;
   }
   
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
   body {
-    @apply text-foreground bg-background;
-    background: radial-gradient(circle at 50% 0%, #1a1a2e 0%, #0a0a0a 100%);
+    @apply text-foreground;
+    background: radial-gradient(circle at 50% 0%, #1a1a2e 0%, #000000 100%);
     background-attachment: fixed;
+    background-size: cover;
     min-height: 100vh;
   }
 }

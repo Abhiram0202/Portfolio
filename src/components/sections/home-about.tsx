@@ -73,7 +73,7 @@ export function HomeAboutSection() {
   };
 
   return (
-    <SectionWrapper id="home-about" className="py-24 border-b-0 overflow-hidden relative">
+    <SectionWrapper id="home-about" className="py-24 border-none overflow-hidden relative">
       <motion.div 
         variants={containerVariants}
         initial="hidden"
