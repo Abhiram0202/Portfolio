@@ -1,0 +1,162 @@
+import {
+  BrainCircuit,
+  Code,
+  Github,
+  Linkedin,
+  Paintbrush,
+  Twitter,
+  Users,
+  Database,
+  Rocket,
+  Plus,
+} from 'lucide-react';
+
+export const personalData = {
+nano src/lib/data.ts
+  name: 'Abhiram Yadav',
+  title: 'Software Engineer',
+  bio: "I’m a Software Engineer who loves transforming ideas into reliable, scalable products. Over time, I’ve explored several technologies and found my passion in building high-performance systems and intuitive user experiences. I’m proficient in JavaScript, C++, Rust, Node.js, and Java — and I enjoy working across both backend and frontend stacks. My key areas of interest include developing Web Applications, Blockchain Solutions, and exploring new ways to bridge on-chain and off-chain systems. Whenever possible, I love building projects with Node.js and modern frameworks like React.js and Next.js.",
+  contact: {
+    email: 'abhiram.yadav@example.com',
+    social: [
+      {
+        name: 'GitHub',
+        url: 'https://github.com/Abhiram0202',
+        icon: Github,
+      },
+      { name: 'LinkedIn', url: 'https://linkedin.com', icon: Linkedin },
+nano src/lib/data.ts
+nano src/lib/data.ts
+      { name: 'Twitter', url: 'https://twitter.com', icon: Twitter },
+    ],
+  },
+};
+
+export const skills = [
+  {
+    category: 'Languages',
+    icon: Code,
+    list: [
+      {
+        name: 'JavaScript',
+        level: 95,
+        description: 'Building interactive and dynamic web applications.',
+      },
+      {
+        name: 'C++',
+        level: 90,
+        description: 'High-performance systems and competitive programming.',
+      },
+      {
+        name: 'Rust',
+        level: 85,
+        description: 'Building safe and concurrent systems software.',
+      },
+      {
+        name: 'Node.js',
+        level: 92,
+        description: 'Creating scalable and efficient back-end services.',
+      },
+      {
+        name: 'Java',
+        level: 88,
+        description: 'Enterprise-level application development.',
+      },
+    ],
+  },
+  {
+    category: 'Frameworks & Technologies',
+    icon: Rocket,
+    list: [
+      {
+        name: 'React.js & Next.js',
+        level: 95,
+        description: 'Building modern, server-rendered React applications.',
+      },
+      {
+        name: 'Blockchain',
+        level: 80,
+        description: 'Developing decentralized applications and solutions.',
+      },
+      {
+        name: 'Web Applications',
+        level: 95,
+        description: 'Full-stack development of web-based products.',
+      },
+    ],
+  },
+  {
+    category: 'Design & UX',
+    icon: Paintbrush,
+    list: [
+      {
+        name: 'Figma',
+        level: 90,
+        description: 'Prototyping and designing user interfaces.',
+      },
+      {
+        name: 'UI/UX Principles',
+        level: 85,
+        description:
+          'Applying user-centered design principles for intuitive experiences.',
+      },
+      {
+        name: 'Responsive Design',
+        level: 95,
+        description: 'Ensuring seamless experiences across all devices.',
+      },
+    ],
+  },
+  {
+    category: 'Soft Skills',
+    icon: Users,
+    list: [
+      {
+        name: 'Problem Solving',
+        level: 95,
+        description:
+          'Analytical and critical thinking to resolve complex issues.',
+      },
+      {
+        name: 'Collaboration',
+        level: 90,
+        description: 'Working effectively in team environments.',
+      },
+      {
+        name: 'Communication',
+        level: 92,
+        description: 'Clearly articulating ideas and feedback.',
+      },
+    ],
+  },
+];
+
+export const projects = [
+  {
+    id: 'project-1',
+    title: 'E-Commerce Platform',
+    description:
+      'A full-featured e-commerce website built with Next.js, Stripe for payments, and a custom CMS for product management. Designed for a seamless shopping experience.',
+    imageKey: 'project1',
+    link: '#',
+    tags: ['Next.js', 'Stripe', 'Tailwind CSS', 'Full-Stack'],
+  },
+  {
+    id: 'project-2',
+    title: 'Task Management App',
+    description:
+      'A collaborative task management tool with real-time updates using Firebase. Features include drag-and-drop boards, user authentication, and notifications.',
+    imageKey: 'project2',
+    link: '#',
+    tags: ['React', 'Firebase', 'Real-time', 'Productivity'],
+  },
+  {
+    id: 'project-3',
+    title: 'Portfolio Generator',
+    description:
+      'A SaaS application that allows users to generate their own professional portfolio websites using AI-powered content suggestions and customizable templates.',
+    imageKey: 'project3',
+    link: '#',
+    tags: ['AI', 'SaaS', 'Next.js', 'GenAI'],
+  },
+];
