@@ -39,11 +39,14 @@ const styles = {
     overflow: 'hidden',
     boxShadow: '0 10px 30px rgba(0,0,0,0.5)',
     border: '1px solid rgba(255,255,255,0.1)',
+    position: 'relative',
   },
   iframe: {
     width: '100%',
     height: '100%',
     border: 'none',
+    display: 'block',
+    overflow: 'hidden',
   },
 };
 
@@ -70,7 +73,8 @@ function ResumePage() {
         <iframe 
           src={pdfUrl} 
           title="Resume PDF" 
-          style={styles.iframe} 
+          style={styles.iframe}
+          scrolling="no" 
         />
       </div>
 
