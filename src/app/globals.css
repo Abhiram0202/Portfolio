@@ -47,7 +47,7 @@
   }
 
   /* Ensure interactive elements show the finger pointer */
-  a, button, [role="button"], input[type="submit"] {
+  a, button, [role="button"], input[type="submit"], .cursor-pointer {
     cursor: pointer !important;
   }
 }

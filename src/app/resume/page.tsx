@@ -15,7 +15,7 @@ export default function ResumePage() {
         </div>
 
         {/* Top Download Button */}
-        <Button asChild size="lg" className="gap-2 shadow-lg shadow-primary/20 hover:scale-105 transition-transform">
+        <Button asChild size="lg" className="gap-2 shadow-lg shadow-primary/20 hover:scale-105 transition-transform bg-primary text-primary-foreground">
           <a href="/ResumeAB.pdf" download="Abhiram_Yadav_Resume.pdf">
             <Download className="h-5 w-5" />
             Download CV
@@ -26,11 +26,12 @@ export default function ResumePage() {
         <div className="w-full glass rounded-xl overflow-hidden border border-white/10 shadow-2xl bg-white/5">
           <div className="relative aspect-[1/1.414] w-full">
             <Image
-              src="/resume-preview.png"
+              src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?q=80&w=2070&auto=format&fit=crop"
               alt="Resume Preview"
               fill
               className="object-contain p-2 md:p-6"
               priority
+              data-ai-hint="resume document"
             />
           </div>
         </div>

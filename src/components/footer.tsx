@@ -7,7 +7,7 @@ export function Footer() {
         <p className="text-sm text-foreground/60 text-center md:text-left">
           Designed and Developed by {personalData.name}
         </p>
-        <p className="text-sm text-foreground/40 text-center">
+        <p className="text-sm text-foreground/40 text-center flex items-center justify-center">
           Copyright © 2026 AY
         </p>
         <div className="flex items-center justify-center gap-4 md:justify-end">
