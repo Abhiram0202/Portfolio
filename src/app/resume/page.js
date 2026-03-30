@@ -2,12 +2,13 @@
 
 import React, { useState, useEffect } from 'react';
 import { AiOutlineDownload } from 'react-icons/ai';
-import { Document, Page, pdfjs } from 'react-pdf';
-import 'react-pdf/dist/Page/AnnotationLayer.css';
-import 'react-pdf/dist/Page/TextLayer.css';
+import dynamic from 'next/dynamic';
 
-// Set up the worker for react-pdf
-pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
+// Dynamically import the viewer with SSR disabled to prevent "DOMMatrix is not defined" error
+const ResumeViewer = dynamic(() => import('@/components/resume-viewer'), {
+  ssr: false,
+  loading: () => <div className="p-20 text-white font-medium">Preparing Viewer...</div>
+});
 
 const styles = {
   container: {
@@ -52,7 +53,7 @@ const styles = {
 };
 
 function ResumePage() {
-  const [width, setWidth] = useState(1200);
+  const [width, setWidth] = useState(800);
 
   useEffect(() => {
     const handleResize = () => {
@@ -80,25 +81,9 @@ function ResumePage() {
         Download CV
       </a>
 
-      {/* Large Resume Preview using react-pdf to avoid scrollbars */}
+      {/* Large Resume Preview with no scrollbars */}
       <div style={styles.resumeWrapper}>
-        <Document
-          file="/ResumeAB.pdf"
-          className="flex justify-center"
-          loading={
-            <div className="p-20 text-black font-medium">Loading Resume...</div>
-          }
-          error={
-            <div className="p-20 text-red-500">Failed to load resume. Ensure ResumeAB.pdf exists in public folder.</div>
-          }
-        >
-          <Page 
-            pageNumber={1} 
-            width={width} 
-            renderAnnotationLayer={false} 
-            renderTextLayer={false}
-          />
-        </Document>
+        <ResumeViewer width={width} />
       </div>
 
       {/* Bottom Download Button */}
