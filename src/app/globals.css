@@ -37,16 +37,20 @@
 
   body {
     @apply text-foreground;
-    /* Single global background for the entire site */
+    /* Single global seamless background for the entire site */
     background: radial-gradient(circle at 50% 0%, #1a1a2e 0%, #000000 100%) fixed !important;
     background-size: cover;
     min-height: 100vh;
     overflow-x: hidden;
-    /* Ensure default cursor behavior */
     cursor: auto;
   }
 
-  /* Ensure interactive elements show the finger pointer */
+  /* Reset all section backgrounds to transparent to prevent lines/breaks */
+  section, div, main {
+    background-color: transparent !important;
+  }
+
+  /* Interactive elements show the finger pointer */
   a, button, [role="button"], input[type="submit"], .cursor-pointer {
     cursor: pointer !important;
   }
