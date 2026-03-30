@@ -37,11 +37,18 @@
 
   body {
     @apply text-foreground;
-    /* Consistent Deep Purple to Black Faded Background */
+    /* Single global background for the entire site */
     background: radial-gradient(circle at 50% 0%, #1a1a2e 0%, #000000 100%) fixed !important;
     background-size: cover;
     min-height: 100vh;
     overflow-x: hidden;
+    /* Ensure default cursor behavior */
+    cursor: auto;
+  }
+
+  /* Ensure interactive elements show the finger pointer */
+  a, button, [role="button"], input[type="submit"] {
+    cursor: pointer !important;
   }
 }
 
