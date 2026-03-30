@@ -1,6 +1,13 @@
 'use client';
-import React from 'react';
+
+import React, { useState, useEffect } from 'react';
 import { AiOutlineDownload } from 'react-icons/ai';
+import { Document, Page, pdfjs } from 'react-pdf';
+import 'react-pdf/dist/Page/AnnotationLayer.css';
+import 'react-pdf/dist/Page/TextLayer.css';
+
+// Set up the worker for react-pdf
+pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
 const styles = {
   container: {
@@ -13,6 +20,7 @@ const styles = {
     flexDirection: 'column',
     alignItems: 'center',
     boxSizing: 'border-box',
+    gap: '40px',
   },
   button: {
     display: 'inline-flex',
@@ -30,35 +38,39 @@ const styles = {
     transition: 'transform 0.2s, background-color 0.2s',
     boxShadow: '0 4px 15px rgba(192, 132, 252, 0.3)',
   },
-  iframeContainer: {
+  resumeWrapper: {
     width: '100%',
-    maxWidth: '1000px',
-    height: '1100px',
-    margin: '40px auto',
+    maxWidth: '900px',
+    display: 'flex',
+    justifyContent: 'center',
+    boxShadow: '0 10px 30px rgba(0,0,0,0.5)',
     borderRadius: '8px',
     overflow: 'hidden',
-    boxShadow: '0 10px 30px rgba(0,0,0,0.5)',
     border: '1px solid rgba(255,255,255,0.1)',
-    position: 'relative',
-  },
-  iframe: {
-    width: '100%',
-    height: '100%',
-    border: 'none',
-    display: 'block',
-    overflow: 'hidden',
+    backgroundColor: 'white',
   },
 };
 
 function ResumePage() {
-  // Parameters to hide toolbar/scrollbar in supported browsers
-  const pdfUrl = '/ResumeAB.pdf#view=FitH&toolbar=0&navpanes=0&scrollbar=0';
+  const [width, setWidth] = useState(1200);
+
+  useEffect(() => {
+    const handleResize = () => {
+      // Scale resume based on window width
+      const newWidth = window.innerWidth > 900 ? 850 : window.innerWidth - 60;
+      setWidth(newWidth);
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   return (
     <div style={styles.container}>
       {/* Top Download Button */}
       <a 
-        href={'/ResumeAB.pdf'} 
+        href="/ResumeAB.pdf" 
         download="ResumeAB.pdf" 
         style={styles.button}
         onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
@@ -68,19 +80,30 @@ function ResumePage() {
         Download CV
       </a>
 
-      {/* Large Resume Preview */}
-      <div style={styles.iframeContainer}>
-        <iframe 
-          src={pdfUrl} 
-          title="Resume PDF" 
-          style={styles.iframe}
-          scrolling="no" 
-        />
+      {/* Large Resume Preview using react-pdf to avoid scrollbars */}
+      <div style={styles.resumeWrapper}>
+        <Document
+          file="/ResumeAB.pdf"
+          className="flex justify-center"
+          loading={
+            <div className="p-20 text-black font-medium">Loading Resume...</div>
+          }
+          error={
+            <div className="p-20 text-red-500">Failed to load resume. Ensure ResumeAB.pdf exists in public folder.</div>
+          }
+        >
+          <Page 
+            pageNumber={1} 
+            width={width} 
+            renderAnnotationLayer={false} 
+            renderTextLayer={false}
+          />
+        </Document>
       </div>
 
       {/* Bottom Download Button */}
       <a 
-        href={'/ResumeAB.pdf'} 
+        href="/ResumeAB.pdf" 
         download="ResumeAB.pdf" 
         style={styles.button}
         onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
