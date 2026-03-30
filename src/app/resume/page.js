@@ -3,8 +3,9 @@
 import React, { useState, useEffect } from 'react';
 import { AiOutlineDownload } from 'react-icons/ai';
 import dynamic from 'next/dynamic';
+import InteractiveHeader from '@/components/interactive-header'; // Import the new header
 
-// Dynamically import the viewer with SSR disabled to prevent "DOMMatrix is not defined" error
+// Dynamically import the viewer with SSR disabled
 const ResumeViewer = dynamic(() => import('@/components/resume-viewer'), {
   ssr: false,
   loading: () => <div className="p-20 text-white font-medium">Preparing Viewer...</div>
@@ -57,7 +58,6 @@ function ResumePage() {
 
   useEffect(() => {
     const handleResize = () => {
-      // Scale resume based on window width
       const newWidth = window.innerWidth > 900 ? 850 : window.innerWidth - 60;
       setWidth(newWidth);
     };
@@ -81,22 +81,13 @@ function ResumePage() {
         Download CV
       </a>
 
-      {/* Large Resume Preview with no scrollbars */}
+      {/* Interactive Header */}
+      <InteractiveHeader />
+
+      {/* Large Resume Preview */}
       <div style={styles.resumeWrapper}>
         <ResumeViewer width={width} />
       </div>
-
-      {/* Bottom Download Button */}
-      <a 
-        href="/ResumeAB.pdf" 
-        download="ResumeAB.pdf" 
-        style={styles.button}
-        onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
-        onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
-      >
-        <AiOutlineDownload style={{ marginRight: '8px', fontSize: '1.2rem' }} />
-        Download CV
-      </a>
     </div>
   );
 }
