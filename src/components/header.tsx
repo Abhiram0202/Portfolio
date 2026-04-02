@@ -73,7 +73,7 @@ export function Header() {
             asChild 
             variant="ghost" 
             size="sm" 
-            className="hover:bg-primary hover:text-black text-foreground/60 transition-all rounded-md px-2 py-1 h-8 group"
+            className="text-foreground/60 transition-all rounded-md px-2 py-1 h-8 group hover:text-primary"
           >
             <a
               href={githubUrl}
