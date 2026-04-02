@@ -76,11 +76,11 @@ export function HeroSection() {
           className="flex flex-col items-start justify-center text-left space-y-4 m-0 p-0"
         >
           <motion.div variants={itemVariants} className="flex items-center gap-3 m-0 p-0 text-left w-full">
-            <h1 className="text-2xl font-bold sm:text-3xl md:text-4xl m-0 p-0">
+            <h1 className="text-xl font-bold sm:text-2xl md:text-3xl m-0 p-0">
               Hi There!
             </h1>
             <motion.span 
-              className="inline-block text-4xl origin-bottom-right"
+              className="inline-block text-3xl origin-bottom-right"
               animate={{ rotate: [0, 20, -10, 20, 0] }}
               transition={{ duration: 2, repeat: Infinity, repeatDelay: 4 }}
             >
@@ -90,20 +90,20 @@ export function HeroSection() {
           
           <motion.h1 
             variants={itemVariants} 
-            className="font-headline text-5xl font-black sm:text-6xl md:text-7xl lg:text-8xl flex flex-wrap items-baseline gap-x-4 pb-2 m-0 p-0 text-left w-full tracking-tighter"
+            className="font-headline text-4xl font-black sm:text-5xl md:text-6xl lg:text-7xl flex flex-wrap items-baseline gap-x-4 pb-2 m-0 p-0 text-left w-full tracking-tighter"
           >
             <span className="m-0 p-0 uppercase">I&apos;M</span>
             <span className="relative inline-block pb-2 m-0 p-0">
               <span className="text-primary relative z-10 whitespace-nowrap drop-shadow-sm uppercase">
                 {personalData.name}
               </span>
-              <span className="absolute bottom-0 left-0 w-full h-[4px] bg-gradient-to-r from-primary to-accent rounded-full opacity-60"></span>
+              <span className="absolute bottom-0 left-0 w-full h-[3px] bg-gradient-to-r from-primary to-accent rounded-full opacity-60"></span>
             </span>
           </motion.h1>
           
           <motion.div 
             variants={itemVariants}
-            className="text-lg md:text-2xl font-bold uppercase tracking-wider mt-2 text-left flex items-center min-h-[1.5em] m-0 p-0 w-full"
+            className="text-base md:text-xl font-bold uppercase tracking-wider mt-2 text-left flex items-center min-h-[1.5em] m-0 p-0 w-full"
           >
             <div className="flex">
               {displayText.split('').map((char, index) => {
@@ -123,7 +123,7 @@ export function HeroSection() {
               <motion.span
                 animate={{ opacity: [1, 0] }}
                 transition={{ repeat: Infinity, duration: 0.8, ease: "linear" }}
-                className="ml-2 w-[3px] h-[1em] bg-primary inline-block self-center"
+                className="ml-2 w-[2px] h-[1em] bg-primary inline-block self-center"
               />
             </div>
           </motion.div>

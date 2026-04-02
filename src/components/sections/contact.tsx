@@ -36,7 +36,7 @@ export function ContactSection() {
         <h2 className="text-xl font-bold tracking-tighter sm:text-2xl md:text-3xl mb-3">
           Find Me On
         </h2>
-        <p className="max-w-[700px] mx-auto text-sm md:text-base text-foreground/80 mb-14">
+        <p className="max-w-[700px] mx-auto text-sm md:text-base text-foreground/80 mb-16">
           Feel free to <span className="text-primary">connect</span> with me.
         </p>
         <motion.div 
