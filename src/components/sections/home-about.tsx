@@ -82,11 +82,11 @@ export function HomeAboutSection() {
         className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10"
       >
         {/* Left Content */}
-        <motion.div variants={textVariants} className="space-y-6 text-left m-0 p-0">
+        <motion.div variants={textVariants} className="space-y-6 text-left m-0 p-0 flex flex-col items-start">
           <h2 className="text-3xl font-bold sm:text-4xl md:text-5xl uppercase relative inline-block m-0 p-0">
             LET ME <span className="text-primary">INTRODUCE</span> MYSELF
             <motion.div 
-              className="absolute -bottom-2 left-0 h-1 bg-primary rounded"
+              className="absolute -bottom-2 left-0 h-1 bg-primary rounded-full"
               initial={{ width: 0 }}
               whileInView={{ width: '100%' }}
               transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}

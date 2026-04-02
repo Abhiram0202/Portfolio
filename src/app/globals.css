@@ -37,7 +37,6 @@
 
   body {
     @apply text-foreground;
-    /* Single global seamless background for the entire site */
     background: radial-gradient(circle at 50% 0%, #1a1a2e 0%, #000000 100%) fixed !important;
     background-size: cover;
     min-height: 100vh;
@@ -45,12 +44,10 @@
     cursor: auto;
   }
 
-  /* Reset all section backgrounds to transparent to prevent lines/breaks */
   section, div, main {
     background-color: transparent !important;
   }
 
-  /* Interactive elements show the finger pointer */
   a, button, [role="button"], input[type="submit"], .cursor-pointer {
     cursor: pointer !important;
   }
@@ -121,14 +118,13 @@
     @apply bg-background/20 backdrop-blur-md border border-white/5 shadow-xl;
   }
 
-  /* Animated underline utility - Slide through effect */
   .animated-underline {
     @apply relative inline-block;
   }
 
   .animated-underline::after {
     content: '';
-    @apply absolute w-full h-[2px] bottom-[-2px] left-0 bg-primary scale-x-0 transition-transform duration-300 ease-out origin-right;
+    @apply absolute w-full h-[3px] bottom-[-4px] left-0 bg-primary scale-x-0 transition-transform duration-300 ease-out origin-right rounded-full;
   }
 
   .animated-underline:hover::after {
