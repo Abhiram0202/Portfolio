@@ -90,11 +90,11 @@ export function HeroSection() {
           
           <motion.h1 
             variants={itemVariants} 
-            className="font-headline text-4xl font-extrabold sm:text-5xl md:text-6xl lg:text-7xl flex flex-wrap gap-x-6 pb-2 m-0 p-0 text-left w-full"
+            className="font-headline text-4xl font-extrabold sm:text-5xl md:text-6xl lg:text-7xl flex flex-wrap items-baseline gap-x-4 pb-2 m-0 p-0 text-left w-full"
           >
-            <span className="m-0 p-0">I&apos;M</span>
+            <span className="m-0 p-0 uppercase">I&apos;M</span>
             <span className="relative inline-block pb-2 m-0 p-0">
-              <span className="text-primary relative z-10 whitespace-nowrap drop-shadow-sm tracking-[0.4em] uppercase">
+              <span className="text-primary relative z-10 whitespace-nowrap drop-shadow-sm uppercase">
                 {personalData.name}
               </span>
               <span className="absolute bottom-0 left-0 w-full h-[6px] bg-gradient-to-r from-primary to-accent rounded-full opacity-60"></span>
