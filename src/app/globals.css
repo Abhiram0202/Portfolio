@@ -124,7 +124,7 @@
 
   .animated-underline::after {
     content: '';
-    @apply absolute w-full h-[3px] bottom-[-4px] left-0 bg-primary scale-x-0 transition-all duration-500 ease-in-out origin-right rounded-full;
+    @apply absolute w-full h-[3px] bottom-[-2px] left-0 bg-primary rounded-full transition-transform duration-300 ease-out origin-right scale-x-0;
   }
 
   .animated-underline:hover::after {
