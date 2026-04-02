@@ -7,7 +7,7 @@ import InteractiveHeader from '@/components/interactive-header';
 
 const ResumeViewer = dynamic(() => import('@/components/resume-viewer'), {
   ssr: false,
-  loading: () => <div className="p-20 text-white font-medium">Preparing Viewer...</div>
+  loading: () => <div className="p-20 text-white font-medium text-center">Preparing Viewer...</div>
 });
 
 const styles = {
@@ -74,7 +74,6 @@ function ResumePage() {
         href="/ResumeAB.pdf" 
         download="ResumeAB.pdf" 
         style={styles.button}
-        className="animated-underline-button"
         onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
         onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
       >
@@ -95,35 +94,12 @@ function ResumePage() {
         href="/ResumeAB.pdf" 
         download="ResumeAB.pdf" 
         style={styles.button}
-        className="animated-underline-button"
         onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
         onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
       >
         <AiOutlineDownload style={{ marginRight: '8px', fontSize: '1.2rem' }} />
         Download CV
       </a>
-
-      <style jsx global>{`
-        .animated-underline-button {
-          position: relative;
-        }
-        .animated-underline-button::after {
-          content: '';
-          position: absolute;
-          width: 80%;
-          height: 2px;
-          bottom: 8px;
-          left: 10%;
-          background-color: black;
-          transform: scaleX(0);
-          transition: transform 0.3s ease-out;
-          transform-origin: right;
-        }
-        .animated-underline-button:hover::after {
-          transform: scaleX(1);
-          transform-origin: left;
-        }
-      `}</style>
     </div>
   );
 }
