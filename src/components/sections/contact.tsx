@@ -54,7 +54,7 @@ export function ContactSection() {
                     <Button
                       variant="outline"
                       size="icon"
-                      className="rounded-full h-10 w-10 bg-card-foreground text-primary hover:text-black hover:bg-card-foreground transition-all duration-300 border-none group"
+                      className="rounded-full h-10 w-10 bg-white text-primary hover:bg-white hover:text-black transition-all duration-300 border-none group shadow-md"
                       asChild
                     >
                       <a
