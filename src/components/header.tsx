@@ -74,7 +74,7 @@ export function Header() {
               href={githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="animated-underline flex items-center gap-1 py-1"
+              className="flex items-center gap-1 py-1"
             >
               <GitFork className="h-4 w-4" />
               <Star className="h-4 w-4" />

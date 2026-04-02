@@ -121,7 +121,7 @@
     @apply bg-background/20 backdrop-blur-md border border-white/5 shadow-xl;
   }
 
-  /* Animated underline utility */
+  /* Animated underline utility - Slide through effect */
   .animated-underline {
     @apply relative inline-block;
   }
