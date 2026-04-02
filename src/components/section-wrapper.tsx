@@ -20,7 +20,9 @@ export function SectionWrapper({
         className
       )}
     >
-      <div className="container px-6 md:px-12 lg:px-24 mx-auto bg-transparent">{children}</div>
+      <div className="container max-w-screen-2xl px-16 md:px-24 mx-auto bg-transparent">
+        {children}
+      </div>
     </section>
   );
 }

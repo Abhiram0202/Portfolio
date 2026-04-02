@@ -23,7 +23,7 @@ const textVariants: Variants = {
     opacity: 1, 
     x: 0,
     transition: { 
-      duration: 2.2,
+      duration: 1.5,
       ease: [0.25, 1, 0.5, 1]
     }
   }
@@ -36,7 +36,7 @@ const imageVariants: Variants = {
     scale: 1, 
     rotate: 0,
     transition: { 
-      duration: 2.5,
+      duration: 1.5,
       ease: [0.25, 1, 0.5, 1],
       delay: 0.3
     }
@@ -81,10 +81,9 @@ export function HomeAboutSection() {
         viewport={{ once: true, margin: "-100px" }}
         className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10"
       >
-
         {/* Left Content */}
-        <motion.div variants={textVariants} className="space-y-6">
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl uppercase relative inline-block">
+        <motion.div variants={textVariants} className="space-y-6 text-left">
+          <h2 className="text-3xl font-bold sm:text-4xl md:text-5xl uppercase relative inline-block m-0 p-0">
             LET ME <span className="text-primary">INTRODUCE</span> MYSELF
             <motion.div 
               className="absolute -bottom-2 left-0 h-1 bg-primary rounded"
@@ -93,7 +92,7 @@ export function HomeAboutSection() {
               transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
             />
           </h2>
-          <motion.p variants={textVariants} className="text-lg text-foreground/80 leading-relaxed">
+          <motion.p variants={textVariants} className="text-lg text-foreground/80 leading-relaxed max-w-2xl">
             {personalData.bio}
           </motion.p>
         </motion.div>
@@ -126,7 +125,6 @@ export function HomeAboutSection() {
             </div>
           </motion.div>
         </motion.div>
-
       </motion.div>
     </SectionWrapper>
   );

@@ -38,17 +38,15 @@ export function HeroSection() {
     
     const handleTyping = () => {
       if (!isDeleting) {
-        // Typing phase
         const nextText = currentTitle.substring(0, displayText.length + 1);
         setDisplayText(nextText);
         setSpeed(150);
 
         if (nextText === currentTitle) {
           setIsDeleting(true);
-          setSpeed(2000); // Wait at the end of the word
+          setSpeed(2000);
         }
       } else {
-        // Deleting phase
         const nextText = currentTitle.substring(0, displayText.length - 1);
         setDisplayText(nextText);
         setSpeed(50);
@@ -56,7 +54,7 @@ export function HeroSection() {
         if (nextText === '') {
           setIsDeleting(false);
           setTitleIndex((prev) => (prev + 1) % titles.length);
-          setSpeed(500); // Pause before typing the next word
+          setSpeed(500);
         }
       }
     };
@@ -70,64 +68,65 @@ export function HeroSection() {
       id="home"
       className="flex min-h-[calc(100vh-4rem)] items-center relative overflow-hidden bg-transparent"
     >
-      <div className="container px-16 md:px-24 relative z-10 bg-transparent">
+      <div className="container max-w-screen-2xl px-16 md:px-24 mx-auto relative z-10 bg-transparent">
         <motion.div 
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="flex flex-col items-start justify-center text-left"
+          className="flex flex-col items-start justify-center text-left space-y-4"
         >
-          <div className="space-y-4 max-w-full">
-            <motion.div variants={itemVariants} className="flex items-center gap-4">
-              <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                Hi There!
-              </h1>
-              <motion.span 
-                className="inline-block text-4xl origin-bottom-right"
-                animate={{ rotate: [0, 20, -10, 20, 0] }}
-                transition={{ duration: 2, repeat: Infinity, repeatDelay: 4 }}
-              >
-                👋
-              </motion.span>
-            </motion.div>
-            
-            <motion.h1 variants={itemVariants} className="font-headline text-4xl font-extrabold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl flex flex-wrap gap-x-4 pb-2">
-              <span>I&apos;M</span>
-              <span className="relative inline-block pb-2 px-1">
-                <span className="text-primary relative z-10 whitespace-nowrap drop-shadow-sm pr-2">
-                  {personalData.name.toUpperCase()}
-                </span>
-                <span className="absolute bottom-0 left-0 w-full h-[6px] bg-gradient-to-r from-primary to-accent rounded-full opacity-60"></span>
-              </span>
-            </motion.h1>
-            
-            <motion.div 
-              variants={itemVariants}
-              className="text-xl md:text-2xl font-bold uppercase tracking-tight mt-6 text-left flex items-center min-h-[1.5em]"
+          <motion.div variants={itemVariants} className="flex items-center gap-4 m-0 p-0">
+            <h1 className="text-3xl font-bold sm:text-4xl md:text-5xl">
+              Hi There!
+            </h1>
+            <motion.span 
+              className="inline-block text-4xl origin-bottom-right"
+              animate={{ rotate: [0, 20, -10, 20, 0] }}
+              transition={{ duration: 2, repeat: Infinity, repeatDelay: 4 }}
             >
-              <div className="flex">
-                {displayText.split('').map((char, index) => {
-                  const currentFullWord = titles[titleIndex].toUpperCase();
-                  const spaceIndex = currentFullWord.indexOf(' ');
-                  const isFirstWord = spaceIndex === -1 ? true : index < spaceIndex;
-                  
-                  return (
-                    <span
-                      key={index}
-                      className={isFirstWord ? "text-primary" : "text-muted-foreground"}
-                    >
-                      {char === " " ? "\u00A0" : char}
-                    </span>
-                  );
-                })}
-                <motion.span
-                  animate={{ opacity: [1, 0] }}
-                  transition={{ repeat: Infinity, duration: 0.8, ease: "linear" }}
-                  className="ml-1 w-[3px] h-[1em] bg-primary inline-block self-center"
-                />
-              </div>
-            </motion.div>
-          </div>
+              👋
+            </motion.span>
+          </motion.div>
+          
+          <motion.h1 
+            variants={itemVariants} 
+            className="font-headline text-4xl font-extrabold sm:text-5xl md:text-6xl lg:text-7xl flex flex-wrap gap-x-6 pb-2 m-0 p-0"
+          >
+            <span>I&apos;M</span>
+            <span className="relative inline-block pb-2">
+              <span className="text-primary relative z-10 whitespace-nowrap drop-shadow-sm">
+                {personalData.name.toUpperCase()}
+              </span>
+              <span className="absolute bottom-0 left-0 w-full h-[6px] bg-gradient-to-r from-primary to-accent rounded-full opacity-60"></span>
+            </span>
+          </motion.h1>
+          
+          <motion.div 
+            variants={itemVariants}
+            className="text-xl md:text-2xl font-bold uppercase tracking-wide mt-6 text-left flex items-center min-h-[1.5em] m-0 p-0"
+          >
+            <div className="flex">
+              {displayText.split('').map((char, index) => {
+                const currentFullWord = titles[titleIndex].toUpperCase();
+                const spaceIndex = currentFullWord.indexOf(' ');
+                const isFirstWord = spaceIndex === -1 ? true : index < spaceIndex;
+                
+                return (
+                  <span
+                    key={index}
+                    className={isFirstWord ? "text-primary" : "text-muted-foreground"}
+                  >
+                    {char === " " ? "\u00A0" : char}
+                  </span>
+                );
+              })}
+              <motion.span
+                animate={{ opacity: [1, 0] }}
+                transition={{ repeat: Infinity, duration: 0.8, ease: "linear" }}
+                className="ml-1 w-[3px] h-[1em] bg-primary inline-block self-center"
+              />
+            </div>
+          </motion.div>
         </motion.div>
       </div>
     </section>
