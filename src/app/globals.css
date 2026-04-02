@@ -42,7 +42,6 @@
     min-height: 100vh;
     overflow-x: hidden;
     cursor: auto;
-    font-size: 14px; /* Slightly smaller overall scale */
   }
 
   section, div, main {
@@ -125,7 +124,7 @@
 
   .animated-underline::after {
     content: '';
-    @apply absolute w-full h-[2.5px] bottom-[-4px] left-0 bg-primary scale-x-0 transition-all duration-500 ease-in-out origin-right rounded-full;
+    @apply absolute w-full h-[3px] bottom-[-4px] left-0 bg-primary scale-x-0 transition-all duration-500 ease-in-out origin-right rounded-full;
   }
 
   .animated-underline:hover::after {

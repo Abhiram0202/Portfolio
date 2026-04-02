@@ -73,26 +73,26 @@ export function HomeAboutSection() {
   };
 
   return (
-    <SectionWrapper id="home-about" className="py-12 md:py-16 border-none overflow-hidden relative min-h-screen flex items-center">
+    <SectionWrapper id="home-about" className="py-24 md:py-32 border-none overflow-hidden relative min-h-screen flex items-center">
       <motion.div 
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
-        className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center relative z-10 w-full"
+        className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10 w-full"
       >
         {/* Left Content */}
-        <motion.div variants={textVariants} className="space-y-3 text-left m-0 p-0 flex flex-col items-start">
-          <h2 className="text-lg font-bold sm:text-xl md:text-2xl uppercase relative inline-block m-0 p-0">
+        <motion.div variants={textVariants} className="space-y-6 text-left m-0 p-0 flex flex-col items-start">
+          <h2 className="text-2xl font-bold sm:text-3xl md:text-4xl uppercase relative inline-block m-0 p-0 tracking-tight">
             LET ME <span className="text-primary">INTRODUCE</span> MYSELF
             <motion.div 
-              className="absolute -bottom-1 left-0 h-[2.5px] bg-primary rounded-full"
+              className="absolute -bottom-2 left-0 h-[4px] bg-primary rounded-full"
               initial={{ width: 0 }}
               whileInView={{ width: '100%' }}
               transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
             />
           </h2>
-          <motion.p variants={textVariants} className="text-sm md:text-base text-foreground/80 leading-relaxed max-w-2xl">
+          <motion.p variants={textVariants} className="text-base md:text-lg text-foreground/80 leading-relaxed max-w-2xl">
             {personalData.bio}
           </motion.p>
         </motion.div>
@@ -110,11 +110,11 @@ export function HomeAboutSection() {
             style={{
               transform: `rotateX(${transform.x}deg) rotateY(${transform.y}deg)`,
             }}
-            className="glass p-2 rounded-full shadow-primary/20 transition-transform duration-100 ease-out relative group"
+            className="glass p-3 rounded-full shadow-primary/20 transition-transform duration-100 ease-out relative group"
             whileHover={{ scale: 1.05 }}
           >
-            <div className="absolute inset-0 bg-primary/20 rounded-full blur-[40px] -z-10 group-hover:bg-primary/40 transition-colors duration-500" />
-            <div className="relative w-[130px] md:w-[160px] aspect-square rounded-full overflow-hidden border-2 border-primary/30 group-hover:border-primary transition-colors duration-300">
+            <div className="absolute inset-0 bg-primary/20 rounded-full blur-[60px] -z-10 group-hover:bg-primary/40 transition-colors duration-500" />
+            <div className="relative w-[180px] md:w-[240px] aspect-square rounded-full overflow-hidden border-2 border-primary/30 group-hover:border-primary transition-colors duration-300">
               <Image
                 src="/myphoto.png"
                 alt="My Profile Photo"
