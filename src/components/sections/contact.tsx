@@ -33,10 +33,10 @@ export function ContactSection() {
         transition={{ duration: 0.6 }}
         className="text-center"
       >
-        <h2 className="text-lg font-bold tracking-tighter sm:text-xl md:text-2xl mb-2">
+        <h2 className="text-xl font-bold tracking-tighter sm:text-2xl md:text-3xl mb-3">
           Find Me On
         </h2>
-        <p className="max-w-[700px] mx-auto text-xs md:text-sm text-foreground/80 mb-5">
+        <p className="max-w-[700px] mx-auto text-sm md:text-base text-foreground/80 mb-14">
           Feel free to <span className="text-primary">connect</span> with me.
         </p>
         <motion.div 
@@ -44,7 +44,7 @@ export function ContactSection() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="flex items-center justify-center gap-3"
+          className="flex items-center justify-center gap-5"
         >
           <TooltipProvider delayDuration={100}>
             {personalData.contact.social.map((social) => (
@@ -54,7 +54,7 @@ export function ContactSection() {
                     <Button
                       variant="outline"
                       size="icon"
-                      className="rounded-full h-9 w-9 bg-white text-primary hover:bg-white hover:text-black transition-all duration-300 border-none group shadow-sm hover:shadow-lg hover:shadow-black/20"
+                      className="rounded-full h-11 w-11 bg-white text-primary hover:bg-white hover:text-black transition-all duration-300 border-none group shadow-sm hover:shadow-lg hover:shadow-primary/20"
                       asChild
                     >
                       <a
@@ -63,11 +63,11 @@ export function ContactSection() {
                         rel="noopener noreferrer"
                         aria-label={social.name}
                       >
-                        <social.icon className="h-5 w-5 transition-colors" />
+                        <social.icon className="h-6 w-6 transition-colors" />
                       </a>
                     </Button>
                   </TooltipTrigger>
-                  <TooltipContent>
+                  <TooltipContent sideOffset={12}>
                     <p>{social.name}</p>
                   </TooltipContent>
                 </Tooltip>

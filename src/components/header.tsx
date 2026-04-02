@@ -47,10 +47,10 @@ export function Header() {
       <div className="container max-w-screen-xl px-4 md:px-8 mx-auto flex h-20 items-center justify-between">
         <Link
           href="/"
-          className="flex items-center gap-2"
+          className="flex items-center gap-2 m-0 p-0"
           onClick={() => setIsOpen(false)}
         >
-          <div className="font-headline text-3xl font-extrabold tracking-tighter text-primary">
+          <div className="font-headline text-4xl font-extrabold tracking-tighter text-primary">
             AR.
           </div>
         </Link>
