@@ -73,7 +73,7 @@ export function HeroSection() {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="flex flex-col items-start justify-center text-left space-y-4"
+          className="flex flex-col items-start justify-center text-left space-y-4 m-0 p-0"
         >
           <motion.div variants={itemVariants} className="flex items-center gap-4 m-0 p-0 text-left w-full">
             <h1 className="text-3xl font-bold sm:text-4xl md:text-5xl m-0 p-0">
@@ -94,7 +94,7 @@ export function HeroSection() {
           >
             <span className="m-0 p-0">I&apos;M</span>
             <span className="relative inline-block pb-2 m-0 p-0">
-              <span className="text-primary relative z-10 whitespace-nowrap drop-shadow-sm tracking-[0.2em]">
+              <span className="text-primary relative z-10 whitespace-nowrap drop-shadow-sm tracking-[0.25em]">
                 {personalData.name.toUpperCase()}
               </span>
               <span className="absolute bottom-0 left-0 w-full h-[6px] bg-gradient-to-r from-primary to-accent rounded-full opacity-60"></span>

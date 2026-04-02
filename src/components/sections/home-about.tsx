@@ -82,7 +82,7 @@ export function HomeAboutSection() {
         className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10"
       >
         {/* Left Content */}
-        <motion.div variants={textVariants} className="space-y-6 text-left">
+        <motion.div variants={textVariants} className="space-y-6 text-left m-0 p-0">
           <h2 className="text-3xl font-bold sm:text-4xl md:text-5xl uppercase relative inline-block m-0 p-0">
             LET ME <span className="text-primary">INTRODUCE</span> MYSELF
             <motion.div 

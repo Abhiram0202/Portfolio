@@ -69,7 +69,12 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <Button asChild variant="ghost" size="sm" className="hover:bg-transparent">
+          <Button 
+            asChild 
+            variant="ghost" 
+            size="sm" 
+            className="hover:bg-transparent hover:text-primary text-foreground/60 transition-colors p-0"
+          >
             <a
               href={githubUrl}
               target="_blank"
