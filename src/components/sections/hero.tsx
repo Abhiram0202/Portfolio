@@ -75,8 +75,8 @@ export function HeroSection() {
           animate="visible"
           className="flex flex-col items-start justify-center text-left space-y-4"
         >
-          <motion.div variants={itemVariants} className="flex items-center gap-4 m-0 p-0">
-            <h1 className="text-3xl font-bold sm:text-4xl md:text-5xl">
+          <motion.div variants={itemVariants} className="flex items-center gap-4 m-0 p-0 text-left w-full">
+            <h1 className="text-3xl font-bold sm:text-4xl md:text-5xl m-0 p-0">
               Hi There!
             </h1>
             <motion.span 
@@ -90,11 +90,11 @@ export function HeroSection() {
           
           <motion.h1 
             variants={itemVariants} 
-            className="font-headline text-4xl font-extrabold sm:text-5xl md:text-6xl lg:text-7xl flex flex-wrap gap-x-6 pb-2 m-0 p-0"
+            className="font-headline text-4xl font-extrabold sm:text-5xl md:text-6xl lg:text-7xl flex flex-wrap gap-x-6 pb-2 m-0 p-0 text-left w-full"
           >
-            <span>I&apos;M</span>
-            <span className="relative inline-block pb-2">
-              <span className="text-primary relative z-10 whitespace-nowrap drop-shadow-sm">
+            <span className="m-0 p-0">I&apos;M</span>
+            <span className="relative inline-block pb-2 m-0 p-0">
+              <span className="text-primary relative z-10 whitespace-nowrap drop-shadow-sm tracking-[0.1em]">
                 {personalData.name.toUpperCase()}
               </span>
               <span className="absolute bottom-0 left-0 w-full h-[6px] bg-gradient-to-r from-primary to-accent rounded-full opacity-60"></span>
@@ -103,7 +103,7 @@ export function HeroSection() {
           
           <motion.div 
             variants={itemVariants}
-            className="text-xl md:text-2xl font-bold uppercase tracking-wide mt-6 text-left flex items-center min-h-[1.5em] m-0 p-0"
+            className="text-xl md:text-2xl font-bold uppercase tracking-wide mt-6 text-left flex items-center min-h-[1.5em] m-0 p-0 w-full"
           >
             <div className="flex">
               {displayText.split('').map((char, index) => {

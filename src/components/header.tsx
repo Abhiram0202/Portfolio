@@ -55,12 +55,12 @@ export function Header() {
           </div>
         </Link>
 
-        <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
+        <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="flex items-center gap-2 text-foreground/60 transition-colors hover:text-foreground"
+              className="animated-underline flex items-center gap-2 text-foreground/60 transition-colors hover:text-foreground py-1"
             >
               <link.icon className="h-4 w-4" />
               <span>{link.label}</span>
@@ -69,12 +69,12 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <Button asChild variant="ghost" size="sm">
+          <Button asChild variant="ghost" size="sm" className="hover:bg-transparent">
             <a
               href={githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1"
+              className="animated-underline flex items-center gap-1 py-1"
             >
               <GitFork className="h-4 w-4" />
               <Star className="h-4 w-4" />

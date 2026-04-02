@@ -120,4 +120,18 @@
   .glass {
     @apply bg-background/20 backdrop-blur-md border border-white/5 shadow-xl;
   }
+
+  /* Animated underline utility */
+  .animated-underline {
+    @apply relative inline-block;
+  }
+
+  .animated-underline::after {
+    content: '';
+    @apply absolute w-full h-[2px] bottom-[-2px] left-0 bg-primary scale-x-0 transition-transform duration-300 ease-out origin-right;
+  }
+
+  .animated-underline:hover::after {
+    @apply scale-x-100 origin-left;
+  }
 }

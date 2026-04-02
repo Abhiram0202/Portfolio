@@ -38,6 +38,7 @@ const styles = {
     fontWeight: '600',
     transition: 'transform 0.2s, background-color 0.2s',
     boxShadow: '0 4px 15px rgba(192, 132, 252, 0.3)',
+    position: 'relative',
   },
   resumeWrapper: {
     width: '100%',
@@ -73,6 +74,7 @@ function ResumePage() {
         href="/ResumeAB.pdf" 
         download="ResumeAB.pdf" 
         style={styles.button}
+        className="animated-underline-button"
         onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
         onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
       >
@@ -93,12 +95,35 @@ function ResumePage() {
         href="/ResumeAB.pdf" 
         download="ResumeAB.pdf" 
         style={styles.button}
+        className="animated-underline-button"
         onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
         onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
       >
         <AiOutlineDownload style={{ marginRight: '8px', fontSize: '1.2rem' }} />
         Download CV
       </a>
+
+      <style jsx global>{`
+        .animated-underline-button {
+          position: relative;
+        }
+        .animated-underline-button::after {
+          content: '';
+          position: absolute;
+          width: 80%;
+          height: 2px;
+          bottom: 8px;
+          left: 10%;
+          background-color: black;
+          transform: scaleX(0);
+          transition: transform 0.3s ease-out;
+          transform-origin: right;
+        }
+        .animated-underline-button:hover::after {
+          transform: scaleX(1);
+          transform-origin: left;
+        }
+      `}</style>
     </div>
   );
 }
