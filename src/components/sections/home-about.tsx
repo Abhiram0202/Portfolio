@@ -18,12 +18,12 @@ const containerVariants: Variants = {
 };
 
 const textVariants: Variants = {
-  hidden: { opacity: 0, x: -30 },
+  hidden: { opacity: 0, x: -20 },
   visible: { 
     opacity: 1, 
     x: 0,
     transition: { 
-      duration: 1.5,
+      duration: 1.2,
       ease: [0.25, 1, 0.5, 1]
     }
   }
@@ -36,9 +36,9 @@ const imageVariants: Variants = {
     scale: 1, 
     rotate: 0,
     transition: { 
-      duration: 1.5,
+      duration: 1.2,
       ease: [0.25, 1, 0.5, 1],
-      delay: 0.3
+      delay: 0.2
     }
   }
 };
@@ -73,23 +73,23 @@ export function HomeAboutSection() {
   };
 
   return (
-    <SectionWrapper id="home-about" className="py-12 md:py-16 border-none overflow-hidden relative">
+    <SectionWrapper id="home-about" className="py-12 md:py-16 border-none overflow-hidden relative min-h-screen flex items-center">
       <motion.div 
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
-        className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center relative z-10"
+        className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center relative z-10 w-full"
       >
         {/* Left Content */}
-        <motion.div variants={textVariants} className="space-y-4 text-left m-0 p-0 flex flex-col items-start">
-          <h2 className="text-xl font-bold sm:text-2xl md:text-3xl uppercase relative inline-block m-0 p-0">
+        <motion.div variants={textVariants} className="space-y-3 text-left m-0 p-0 flex flex-col items-start">
+          <h2 className="text-lg font-bold sm:text-xl md:text-2xl uppercase relative inline-block m-0 p-0">
             LET ME <span className="text-primary">INTRODUCE</span> MYSELF
             <motion.div 
-              className="absolute -bottom-1 left-0 h-1 bg-primary rounded-full"
+              className="absolute -bottom-1 left-0 h-[2.5px] bg-primary rounded-full"
               initial={{ width: 0 }}
               whileInView={{ width: '100%' }}
-              transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
+              transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
             />
           </h2>
           <motion.p variants={textVariants} className="text-sm md:text-base text-foreground/80 leading-relaxed max-w-2xl">
@@ -114,7 +114,7 @@ export function HomeAboutSection() {
             whileHover={{ scale: 1.05 }}
           >
             <div className="absolute inset-0 bg-primary/20 rounded-full blur-[40px] -z-10 group-hover:bg-primary/40 transition-colors duration-500" />
-            <div className="relative w-[150px] md:w-[180px] aspect-square rounded-full overflow-hidden border-2 border-primary/30 group-hover:border-primary transition-colors duration-300">
+            <div className="relative w-[130px] md:w-[160px] aspect-square rounded-full overflow-hidden border-2 border-primary/30 group-hover:border-primary transition-colors duration-300">
               <Image
                 src="/myphoto.png"
                 alt="My Profile Photo"

@@ -33,10 +33,10 @@ export function ContactSection() {
         transition={{ duration: 0.6 }}
         className="text-center"
       >
-        <h2 className="text-xl font-bold tracking-tighter sm:text-2xl md:text-3xl mb-3">
+        <h2 className="text-lg font-bold tracking-tighter sm:text-xl md:text-2xl mb-2">
           Find Me On
         </h2>
-        <p className="max-w-[700px] mx-auto text-sm md:text-base text-foreground/80 mb-6">
+        <p className="max-w-[700px] mx-auto text-xs md:text-sm text-foreground/80 mb-5">
           Feel free to <span className="text-primary">connect</span> with me.
         </p>
         <motion.div 
@@ -44,7 +44,7 @@ export function ContactSection() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="flex items-center justify-center gap-4"
+          className="flex items-center justify-center gap-3"
         >
           <TooltipProvider delayDuration={100}>
             {personalData.contact.social.map((social) => (
@@ -54,7 +54,7 @@ export function ContactSection() {
                     <Button
                       variant="outline"
                       size="icon"
-                      className="rounded-full h-10 w-10 bg-white text-primary hover:bg-white hover:text-black transition-all duration-300 border-none group shadow-md"
+                      className="rounded-full h-9 w-9 bg-white text-primary hover:bg-white hover:text-black transition-all duration-300 border-none group shadow-sm hover:shadow-lg hover:shadow-black/20"
                       asChild
                     >
                       <a

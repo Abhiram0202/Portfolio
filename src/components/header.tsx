@@ -44,18 +44,18 @@ export function Header() {
       }}
       className="sticky top-0 z-50 w-full glass"
     >
-      <div className="container max-w-screen-xl px-8 md:px-16 mx-auto flex h-16 items-center justify-between">
+      <div className="container max-w-screen-xl px-4 md:px-8 mx-auto flex h-14 items-center justify-between">
         <Link
           href="/"
           className="flex items-center gap-2"
           onClick={() => setIsOpen(false)}
         >
-          <div className="font-headline text-xl font-bold tracking-tighter text-primary">
+          <div className="font-headline text-lg font-bold tracking-tighter text-primary">
             AR.
           </div>
         </Link>
 
-        <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
+        <nav className="hidden md:flex items-center gap-5 text-sm font-medium">
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -81,8 +81,8 @@ export function Header() {
               rel="noopener noreferrer"
               className="flex items-center gap-1"
             >
-              <GitFork className="h-4 w-4" />
-              <Star className="h-4 w-4" />
+              <GitFork className="h-4 w-4 text-foreground/60 group-hover:text-black" />
+              <Star className="h-4 w-4 text-foreground/60 group-hover:text-black" />
             </a>
           </Button>
           <Button
@@ -92,7 +92,7 @@ export function Header() {
             className="md:hidden"
             aria-label="Toggle menu"
           >
-            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </Button>
         </div>
       </div>
@@ -104,16 +104,16 @@ export function Header() {
           />
           <div
             className={cn(
-              "md:hidden fixed inset-x-0 top-16 z-50 border-t border-white/5 bg-background/95 backdrop-blur-md",
+              "md:hidden fixed inset-x-0 top-14 z-50 border-t border-white/5 bg-background/95 backdrop-blur-md",
               "animate-in fade-in-20 slide-in-from-top-5"
             )}
           >
-            <nav className="grid items-start gap-4 p-4">
+            <nav className="grid items-start gap-3 p-4">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="flex items-center gap-3 rounded-lg px-4 py-2 text-lg font-medium text-foreground transition-colors hover:text-foreground hover:bg-white/5"
+                  className="flex items-center gap-3 rounded-lg px-4 py-2 text-base font-medium text-foreground transition-colors hover:text-foreground hover:bg-white/5"
                   onClick={() => setIsOpen(false)}
                 >
                   <link.icon className="h-5 w-5" />
