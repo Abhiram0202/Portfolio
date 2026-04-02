@@ -76,11 +76,11 @@ export function HeroSection() {
           className="flex flex-col items-start justify-center text-left space-y-4 m-0 p-0"
         >
           <motion.div variants={itemVariants} className="flex items-center gap-3 m-0 p-0 text-left w-full">
-            <h1 className="text-xl font-bold sm:text-2xl md:text-3xl m-0 p-0">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold m-0 p-0">
               Hi There!
             </h1>
             <motion.span 
-              className="inline-block text-3xl origin-bottom-right"
+              className="inline-block text-3xl md:text-4xl origin-bottom-right"
               animate={{ rotate: [0, 20, -10, 20, 0] }}
               transition={{ duration: 2, repeat: Infinity, repeatDelay: 4 }}
             >
@@ -103,7 +103,7 @@ export function HeroSection() {
           
           <motion.div 
             variants={itemVariants}
-            className="text-base md:text-xl font-bold uppercase tracking-wider mt-2 text-left flex items-center min-h-[1.5em] m-0 p-0 w-full"
+            className="text-lg md:text-2xl font-bold uppercase tracking-wider mt-2 text-left flex items-center min-h-[1.5em] m-0 p-0 w-full"
           >
             <div className="flex">
               {displayText.split('').map((char, index) => {
