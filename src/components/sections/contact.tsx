@@ -33,10 +33,10 @@ export function ContactSection() {
         transition={{ duration: 0.6 }}
         className="text-center"
       >
-        <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-4">
+        <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl mb-4">
           Find Me On
         </h2>
-        <p className="max-w-[700px] mx-auto text-foreground/80 md:text-xl mb-8">
+        <p className="max-w-[700px] mx-auto text-foreground/80 md:text-lg mb-8">
           Feel free to <span className="text-primary">connect</span> with me.
         </p>
         <motion.div 
