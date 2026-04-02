@@ -3,9 +3,8 @@
 import React, { useState, useEffect } from 'react';
 import { AiOutlineDownload } from 'react-icons/ai';
 import dynamic from 'next/dynamic';
-import InteractiveHeader from '@/components/interactive-header'; // Import the new header
+import InteractiveHeader from '@/components/interactive-header';
 
-// Dynamically import the viewer with SSR disabled
 const ResumeViewer = dynamic(() => import('@/components/resume-viewer'), {
   ssr: false,
   loading: () => <div className="p-20 text-white font-medium">Preparing Viewer...</div>
@@ -88,6 +87,18 @@ function ResumePage() {
       <div style={styles.resumeWrapper}>
         <ResumeViewer width={width} />
       </div>
+
+      {/* Bottom Download Button */}
+      <a 
+        href="/ResumeAB.pdf" 
+        download="ResumeAB.pdf" 
+        style={styles.button}
+        onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
+        onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
+      >
+        <AiOutlineDownload style={{ marginRight: '8px', fontSize: '1.2rem' }} />
+        Download CV
+      </a>
     </div>
   );
 }

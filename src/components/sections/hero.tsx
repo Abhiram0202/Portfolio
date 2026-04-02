@@ -91,7 +91,7 @@ export function HeroSection() {
               </motion.span>
             </motion.div>
             
-            <motion.h1 variants={itemVariants} className="font-headline text-4xl font-extrabold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl flex flex-wrap gap-x-4 pb-4">
+            <motion.h1 variants={itemVariants} className="font-headline text-4xl font-extrabold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl flex flex-wrap gap-x-4 pb-2">
               <span>I&apos;M</span>
               <span className="relative inline-block pb-2 px-1">
                 <span className="text-primary relative z-10 whitespace-nowrap drop-shadow-sm pr-2">
@@ -103,18 +103,18 @@ export function HeroSection() {
             
             <motion.div 
               variants={itemVariants}
-              className="text-xl md:text-2xl font-medium uppercase tracking-widest mt-4 flex items-center flex-wrap min-h-[1.5em]"
+              className="text-xl md:text-2xl font-bold uppercase tracking-tight mt-6 text-left flex items-center min-h-[1.5em]"
             >
               <div className="flex">
                 {displayText.split('').map((char, index) => {
                   const currentFullWord = titles[titleIndex].toUpperCase();
                   const spaceIndex = currentFullWord.indexOf(' ');
-                  const isFirstWord = index < spaceIndex;
+                  const isFirstWord = spaceIndex === -1 ? true : index < spaceIndex;
                   
                   return (
                     <span
                       key={index}
-                      className={isFirstWord ? "text-primary font-bold" : "text-muted-foreground"}
+                      className={isFirstWord ? "text-primary" : "text-muted-foreground"}
                     >
                       {char === " " ? "\u00A0" : char}
                     </span>
