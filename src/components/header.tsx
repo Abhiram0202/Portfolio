@@ -73,13 +73,13 @@ export function Header() {
             asChild 
             variant="ghost" 
             size="sm" 
-            className="hover:bg-transparent hover:text-primary text-foreground/60 transition-colors p-0"
+            className="hover:bg-primary hover:text-black text-foreground/60 transition-all rounded-md px-2 py-1 h-8"
           >
             <a
               href={githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1 py-1"
+              className="flex items-center gap-1"
             >
               <GitFork className="h-4 w-4" />
               <Star className="h-4 w-4" />
