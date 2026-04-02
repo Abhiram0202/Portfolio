@@ -66,21 +66,21 @@ export function HeroSection() {
   return (
     <section
       id="home"
-      className="flex min-h-[calc(100vh-4rem)] items-center relative overflow-hidden bg-transparent"
+      className="flex min-h-[calc(80vh-4rem)] items-center relative overflow-hidden bg-transparent"
     >
       <div className="container max-w-screen-xl px-8 md:px-16 mx-auto relative z-10 bg-transparent">
         <motion.div 
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="flex flex-col items-start justify-center text-left space-y-4 m-0 p-0"
+          className="flex flex-col items-start justify-center text-left space-y-2 m-0 p-0"
         >
-          <motion.div variants={itemVariants} className="flex items-center gap-4 m-0 p-0 text-left w-full">
-            <h1 className="text-2xl font-bold sm:text-3xl md:text-4xl m-0 p-0">
+          <motion.div variants={itemVariants} className="flex items-center gap-3 m-0 p-0 text-left w-full">
+            <h1 className="text-xl font-bold sm:text-2xl md:text-3xl m-0 p-0">
               Hi There!
             </h1>
             <motion.span 
-              className="inline-block text-3xl origin-bottom-right"
+              className="inline-block text-2xl origin-bottom-right"
               animate={{ rotate: [0, 20, -10, 20, 0] }}
               transition={{ duration: 2, repeat: Infinity, repeatDelay: 4 }}
             >
@@ -90,20 +90,20 @@ export function HeroSection() {
           
           <motion.h1 
             variants={itemVariants} 
-            className="font-headline text-3xl font-extrabold sm:text-4xl md:text-5xl lg:text-6xl flex flex-wrap items-baseline gap-x-3 pb-1 m-0 p-0 text-left w-full tracking-tight"
+            className="font-headline text-2xl font-extrabold sm:text-3xl md:text-4xl lg:text-5xl flex flex-wrap items-baseline gap-x-2 pb-1 m-0 p-0 text-left w-full tracking-tight"
           >
             <span className="m-0 p-0 uppercase">I&apos;M</span>
             <span className="relative inline-block pb-1 m-0 p-0">
               <span className="text-primary relative z-10 whitespace-nowrap drop-shadow-sm uppercase">
                 {personalData.name}
               </span>
-              <span className="absolute bottom-0 left-0 w-full h-[4px] bg-gradient-to-r from-primary to-accent rounded-full opacity-60"></span>
+              <span className="absolute bottom-0 left-0 w-full h-[3px] bg-gradient-to-r from-primary to-accent rounded-full opacity-60"></span>
             </span>
           </motion.h1>
           
           <motion.div 
             variants={itemVariants}
-            className="text-lg md:text-xl font-bold uppercase tracking-wide mt-4 text-left flex items-center min-h-[1.5em] m-0 p-0 w-full"
+            className="text-base md:text-lg font-bold uppercase tracking-wide mt-2 text-left flex items-center min-h-[1.5em] m-0 p-0 w-full"
           >
             <div className="flex">
               {displayText.split('').map((char, index) => {

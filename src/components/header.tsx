@@ -44,18 +44,18 @@ export function Header() {
       }}
       className="sticky top-0 z-50 w-full glass"
     >
-      <div className="container flex h-16 max-w-screen-2xl items-center justify-between px-16 md:px-24">
+      <div className="container max-w-screen-xl px-8 md:px-16 mx-auto flex h-16 items-center justify-between">
         <Link
           href="/"
           className="flex items-center gap-2"
           onClick={() => setIsOpen(false)}
         >
-          <div className="font-headline text-2xl font-bold tracking-tighter text-primary">
+          <div className="font-headline text-xl font-bold tracking-tighter text-primary">
             AR.
           </div>
         </Link>
 
-        <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
+        <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
           {navLinks.map((link) => (
             <Link
               key={link.href}

@@ -25,7 +25,7 @@ const itemVariants = {
 
 export function ContactSection() {
   return (
-    <SectionWrapper id="contact" className="">
+    <SectionWrapper id="contact">
       <motion.div 
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -33,10 +33,10 @@ export function ContactSection() {
         transition={{ duration: 0.6 }}
         className="text-center"
       >
-        <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl mb-4">
+        <h2 className="text-xl font-bold tracking-tighter sm:text-2xl md:text-3xl mb-3">
           Find Me On
         </h2>
-        <p className="max-w-[700px] mx-auto text-foreground/80 md:text-lg mb-8">
+        <p className="max-w-[700px] mx-auto text-sm md:text-base text-foreground/80 mb-6">
           Feel free to <span className="text-primary">connect</span> with me.
         </p>
         <motion.div 
@@ -44,7 +44,7 @@ export function ContactSection() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="flex items-center justify-center gap-6"
+          className="flex items-center justify-center gap-4"
         >
           <TooltipProvider delayDuration={100}>
             {personalData.contact.social.map((social) => (
@@ -63,7 +63,7 @@ export function ContactSection() {
                         rel="noopener noreferrer"
                         aria-label={social.name}
                       >
-                        <social.icon className="h-6 w-6 transition-colors" />
+                        <social.icon className="h-5 w-5 transition-colors" />
                       </a>
                     </Button>
                   </TooltipTrigger>
