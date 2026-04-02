@@ -94,8 +94,8 @@ export function HeroSection() {
           >
             <span className="m-0 p-0">I&apos;M</span>
             <span className="relative inline-block pb-2 m-0 p-0">
-              <span className="text-primary relative z-10 whitespace-nowrap drop-shadow-sm tracking-[0.25em]">
-                {personalData.name.toUpperCase()}
+              <span className="text-primary relative z-10 whitespace-nowrap drop-shadow-sm tracking-[0.4em] uppercase">
+                {personalData.name}
               </span>
               <span className="absolute bottom-0 left-0 w-full h-[6px] bg-gradient-to-r from-primary to-accent rounded-full opacity-60"></span>
             </span>
