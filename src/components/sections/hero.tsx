@@ -25,7 +25,7 @@ const itemVariants: Variants = {
   }
 };
 
-const titles = ["Software Engineer", "Backend Developer"];
+const titles = ["Software Engineer"];
 
 export function HeroSection() {
   const [titleIndex, setTitleIndex] = useState(0);
