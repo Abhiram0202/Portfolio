@@ -7,7 +7,7 @@ import { Footer } from '@/components/footer';
 import { Preloader } from '@/components/preloader';
 
 export const metadata = {
-  title: "Abhiram Yadav | Full Stack Developer",
+  title: "Abhiram Yadav | Software Engineer",
   description: "Portfolio of Abhiram Yadav",
   icons: {
     icon: "/favicon-v2.ico",
