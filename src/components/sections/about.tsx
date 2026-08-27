@@ -8,7 +8,7 @@ export function AboutSection() {
     <SectionWrapper id="about">
       <div className="text-center">
         <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-8 uppercase">
-          Let Me Introduce Myself
+          About
         </h2>
       </div>
       <div className="max-w-4xl mx-auto text-left space-y-8">
@@ -30,7 +30,7 @@ export function AboutSection() {
           </CardHeader>
           <CardContent>
             <p className="text-foreground/90 leading-relaxed">
-            Software Engineer with a strong foundation in Java, backend development, and AI. Passionate about building scalable, efficient, and real-world software solutions while continuously improving technical and problem-solving skills. Seeking opportunities to contribute to innovative projects, apply AI-driven solutions, and grow into a highly skilled software professional.
+            Software Engineer with a strong foundation in Java, Python, backend development, and Artificial Intelligence. Passionate about building scalable, efficient, and real-world software solutions while continuously improving technical and problem-solving skills. Seeking opportunities to contribute to innovative projects, apply AI-driven solutions, and grow into a highly skilled software professional.
             </p>
           </CardContent>
         </Card>

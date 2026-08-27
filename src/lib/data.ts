@@ -14,7 +14,7 @@ import {
 export const personalData = {
   name: 'Abhiram Yadav',
   title: 'Software Engineer',
-  bio: "I’m a Software Engineer who loves transforming ideas into reliable, scalable products. Over time, I’ve explored several technologies and found my passion in building high-performance systems and intuitive user experiences. I’m proficient in JavaScript, C++, Rust, Node.js, and Java — and I enjoy working across both backend and frontend stacks. My key areas of interest include developing Web Applications, Blockchain Solutions, and exploring new ways to bridge on-chain and off-chain systems. Whenever possible, I love building projects with Node.js and modern frameworks like React.js and Next.js.",
+  bio: "I’m a Software Engineer who loves transforming ideas into reliable, scalable applications. Over time, I’ve explored different technologies and found my passion in building efficient backend systems and intuitive web experiences. I’m proficient in Java, JavaScript, Spring Boot, Node.js, SQL, and React.js, and I enjoy working across both backend and frontend development. My key areas of interest include Web Applications, Backend Development, and Artificial Intelligence. Whenever possible, I love building practical projects that help me strengthen my skills and turn ideas into real-world solutions.",
   contact: {
     email: 'abhiy9164@gmail.com',
     social: [
