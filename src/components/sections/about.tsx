@@ -30,10 +30,7 @@ export function AboutSection() {
           </CardHeader>
           <CardContent>
             <p className="text-foreground/90 leading-relaxed">
-              Dedicated third-year Computer Science student at SR University (2023–2027) with strong
-              interest in Data Structures, Algorithms, and Software Development. Currently
-              strengthening programming fundamentals and full-stack development skills. Seeking an
-              internship opportunity to apply analytical thinking and grow through real-world experience.
+            Software Engineer with a strong foundation in Java, backend development, and AI. Passionate about building scalable, efficient, and real-world software solutions while continuously improving technical and problem-solving skills. Seeking opportunities to contribute to innovative projects, apply AI-driven solutions, and grow into a highly skilled software professional.
             </p>
           </CardContent>
         </Card>
@@ -48,8 +45,7 @@ export function AboutSection() {
               <p className="text-foreground/80">SR University, India</p>
               <p className="text-sm text-muted-foreground">2023 – 2027</p>
               <p className="mt-2 text-foreground/90">
-                <span className="font-semibold">Relevant Coursework:</span> Data Structures, Algorithms, DBMS, Operating Systems, Computer
-                Networks
+                <span className="font-semibold">Relevant Coursework:</span> Object-Oriented Programming (Java), Data Structures & Algorithms, Database Management Systems, Operating Systems, Computer Networks, Software Engineering, Backend Development, Artificial Intelligence & Machine Learning, Cloud Computing.
               </p>
             </div>
           </CardContent>
@@ -62,16 +58,25 @@ export function AboutSection() {
           <CardContent>
             <ul className="list-disc list-inside space-y-2 text-foreground/90">
               <li>
-                <strong>Programming Languages:</strong> Java, JavaScript, Python
+                <strong>Programming Languages:</strong> Java, JavaScript, HTML/CSS, SQL
               </li>
               <li>
-                <strong>Core Concepts:</strong> Data Structures (Basics), Algorithms (Basics), OOP
+                <strong>rameworks & Technologies:</strong> Spring Boot, REST APIs, React, Node.js
               </li>
               <li>
-                <strong>Web Development (Learning):</strong> HTML, CSS, React, Node.js
+                <strong>Database:</strong> MySQL, MongoDB
               </li>
               <li>
-                <strong>Tools:</strong> Git (Basics), VS Code, AWS
+                <strong>Core Concepts:</strong> Data Structures & Algorithms, OOP, DBMS
+              </li>
+              <li>
+                <strong>AI:</strong> Artificial Intelligence, Generative AI
+              </li>
+              <li>
+                <strong>Tools:</strong> Git, GitHub, Postman, VS Code
+              </li>
+              <li>
+                <strong>Cloud:</strong> AWS
               </li>
             </ul>
           </CardContent>
@@ -83,10 +88,11 @@ export function AboutSection() {
           </CardHeader>
           <CardContent>
             <ul className="list-disc list-inside space-y-2 text-foreground/90">
-              <li>Actively practicing problem-solving and Data Structures & Algorithms</li>
-              <li>Building foundational knowledge in full-stack development</li>
-              <li>Exploring AI-assisted coding tools to enhance productivity</li>
-              <li>Consistently improving programming fundamentals</li>
+              <li>Actively practicing Data Structures & Algorithms and problem-solving</li>
+              <li>Building projects using Java, Spring Boot, REST APIs, and databases</li>
+              <li>Exploring Artificial Intelligence and Generative AI technologies</li>
+              <li>Strengthening OOP, backend development, and software engineering fundamentals</li>
+              <li>Continuously improving skills through hands-on projects and coding practice</li>
             </ul>
           </CardContent>
         </Card>
